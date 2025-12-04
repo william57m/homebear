@@ -1,5 +1,5 @@
 import React from 'react';
-import { Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
+import { Facebook, Instagram } from 'lucide-react';
 import { companyInfo, contactInfo } from '@/data/contactData';
 import logo from '@/images/logo.png';
 
@@ -15,7 +15,7 @@ const Footer = () => {
                 alt={`${companyInfo.name} logo`}
                 className="w-10 h-10 object-contain brightness-0 invert"
               />
-              <span className="text-2xl font-bold">{companyInfo.name}</span>
+              <span className="text-2xl font-bold font-sofia-pro pt-4">{companyInfo.name}</span>
             </div>
             <p className="text-gray-400 mb-4">
               {companyInfo.tagline}

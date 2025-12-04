@@ -1,4 +1,11 @@
-import { Moon, LogOut, Leaf, Film, Sun, Home, ShieldCheck } from 'lucide-react';
+import { Moon, Leaf, Film, Sun, Home, ShieldCheck, Sparkles } from 'lucide-react';
+import scenarioAwayMode from '@/images/scenario-away-mode.png';
+import scenarioBedtime from '@/images/scenario-bedtime.png';
+import scenarioClimateControl from '@/images/scenario-climate-control.png';
+import scenarioMorningRoutine from '@/images/scenario-morning-routine.png';
+import scenarioMore from '@/images/scenario-more.png';
+import scenarioMovie from '@/images/scenario-movie.png';
+import scenarioWelcome from '@/images/scenario-welcome.png';
 
 export const scenarios = [
   {
@@ -14,7 +21,7 @@ export const scenarios = [
       "Optimizes temperature based on occupancy patterns",
       "Tracks energy savings and overall efficiency"
     ],
-    image: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80"
+    image: scenarioClimateControl // "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80"
   },
   {
     icon: ShieldCheck,
@@ -28,7 +35,7 @@ export const scenarios = [
       "Temperature monitoring to prevent freezing or overheating",
       "24/7 instant alerts to your phone"
     ],
-    image: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=800&q=80"
+    image: scenarioAwayMode
   },
   {
     icon: Moon,
@@ -41,7 +48,7 @@ export const scenarios = [
       "Automatically locks all doors",
       "Arms security system in night mode",
     ],
-    image: "https://images.unsplash.com/photo-1616594039964-ae9021a400a0?w=800&q=80"
+    image: scenarioBedtime
   },
   {
     icon: Film,
@@ -54,7 +61,7 @@ export const scenarios = [
       "Adjusts TV picture settings for cinema",
       "Pauses notifications on smart devices"
     ],
-    image: "https://images.unsplash.com/photo-1574375927938-d5a98e8ffe85?w=800&q=80"
+    image: scenarioMovie
   },
   {
     icon: Sun,
@@ -67,7 +74,7 @@ export const scenarios = [
       "Reads calendar and weather updates",
       "Adjusts routine based on schedule"
     ],
-    image: "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=800&q=80"
+    image: scenarioMorningRoutine
   },
   {
     icon: Home,
@@ -80,6 +87,20 @@ export const scenarios = [
       "Unlocks door when you arrive",
       "Disarms security system automatically"
     ],
-    image: "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800&q=80"
+    image: scenarioWelcome
+  },
+  {
+    icon: Sparkles,
+    title: "And Much More...",
+    description: "These scenarios are just the beginning. Every routine, habit, and preference in your home can be automated and tailored to you, creating comfort, safety, and convenience that feels natural.",
+    details: [
+      "Custom automations for your unique lifestyle",
+      "Adaptive learning from your daily patterns",
+      "Seamless integration with all your smart devices",
+      "Voice control and mobile app management",
+      "Energy monitoring and cost optimization",
+      "Continuous updates with new features"
+    ],
+    image: scenarioMore
   }
 ];

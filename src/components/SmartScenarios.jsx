@@ -80,13 +80,6 @@ const SmartScenarios = () => {
                     className="absolute inset-0 w-full h-full object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-black/40 to-transparent"></div>
-                  
-                  {/* Icon overlay on image */}
-                  <div className="absolute top-8 left-8">
-                    <div className="w-16 h-16 bg-white/90 backdrop-blur-sm rounded-2xl flex items-center justify-center text-[#456146] shadow-lg">
-                      <Icon size={32} strokeWidth={2} />
-                    </div>
-                  </div>
                 </motion.div>
 
                 {/* Content Section */}
@@ -96,9 +89,15 @@ const SmartScenarios = () => {
                     animate={{ y: 0, opacity: 1 }}
                     transition={{ delay: 0.3 }}
                   >
-                    <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#2a3a2b] mb-6">
-                      {currentScenario.title}
-                    </h3>
+                    <div className="flex items-center gap-4 mb-6">
+                      {/* Icon next to title */}
+                      <div className="w-14 h-14 md:w-16 md:h-16 bg-[#456146]/10 rounded-2xl flex items-center justify-center text-[#456146] flex-shrink-0">
+                        <Icon size={32} strokeWidth={2} />
+                      </div>
+                      <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#2a3a2b]">
+                        {currentScenario.title}
+                      </h3>
+                    </div>
                     <p className="text-[#5a5a5a] leading-relaxed text-lg md:text-xl mb-8">
                       {currentScenario.description}
                     </p>
@@ -158,19 +157,6 @@ const SmartScenarios = () => {
             />
           ))}
         </div>
-      </div>
-
-      {/* Bottom Text */}
-      <div className="container mx-auto max-w-3xl px-4 md:px-8 mt-16">
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-center text-lg md:text-xl text-[#5a5a5a] leading-relaxed"
-        >
-          These scenarios are just the beginning. Every routine, habit, and preference in your home can be automated and tailored to you, creating comfort, safety, and convenience that feels natural.
-        </motion.p>
       </div>
     </section>
   );

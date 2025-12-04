@@ -64,7 +64,7 @@ const Header = () => {
               alt="homebear logo" 
               className="w-10 h-10 object-contain"
             />
-            <span className="text-2xl pt-2 font-bold text-[#283431] font-sofia-pro">homebear</span>
+            <span className="text-2xl pt-3 font-bold text-[#283431] font-sofia-pro">homebear</span>
           </motion.div>
 
           {/* Desktop Menu */}
