@@ -3,6 +3,7 @@ import { useLocation } from 'react-router-dom';
 import Hero from '@/components/Hero';
 import Services from '@/components/Services';
 import SmartScenarios from '@/components/SmartScenarios';
+import Difference from '@/components/Difference';
 import Contact from '@/components/Contact';
 
 const Home = () => {
@@ -25,6 +26,7 @@ const Home = () => {
       <Hero />
       <Services />
       <SmartScenarios />
+      <Difference />
       <Contact />
     </>
   );
