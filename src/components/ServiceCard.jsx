@@ -17,9 +17,9 @@ const ServiceCard = ({ service, index }) => {
     >
       <Link 
         to={`/services/${service.id}`}
-        className="block h-full bg-gradient-to-br from-[#f8f6f3] to-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-[#456146]/10 flex flex-col"
+        className="group block h-full bg-gradient-to-br from-[#f8f6f3] to-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-[#456146]/10 flex flex-col"
       >
-        <div className="w-16 h-16 bg-[#456146] rounded-2xl flex items-center justify-center mb-6 transform transition-transform duration-300 group-hover:rotate-6">
+        <div className="w-16 h-16 bg-[#456146] rounded-2xl flex items-center justify-center mb-6 transform transition-transform duration-300 group-hover:rotate-3 group-hover:scale-110">
           <Icon className="text-white" size={32} />
         </div>
         

@@ -22,8 +22,8 @@ const differences = [
 
 const Difference = () => {
   return (
-    <section className="py-20 px-4 bg-gradient-to-br from-[#e8f5e9] via-[#f1f8e9] to-[#fff8e1]">
-      <div className="container mx-auto max-w-6xl">
+    <section className="py-20 px-4 bg-[#2a3a2b]">
+      <div className="container mx-auto max-w-7xl">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -31,12 +31,15 @@ const Difference = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-[#2a3a2b] mb-4">
-            The <span className="text-[#456146]">homebear</span> difference
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+            The <span className="text-[#8fb990]">homebear</span> difference
           </h2>
+          <p className="text-lg text-gray-300 max-w-2xl mx-auto">
+            What sets us apart from the rest
+          </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-8 lg:gap-12">
+        <div className="grid md:grid-cols-3 gap-8">
           {differences.map((item, index) => {
             const Icon = item.icon;
             return (
@@ -45,20 +48,20 @@ const Difference = () => {
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: index * 0.2, duration: 0.6 }}
-                className="text-center"
+                transition={{ delay: index * 0.15, duration: 0.6 }}
+                className="group"
               >
-                <div className="flex justify-center mb-6">
-                  <div className="w-20 h-20 bg-[#456146]/10 rounded-2xl flex items-center justify-center text-[#456146]">
-                    <Icon size={40} strokeWidth={2} />
+                <div className="bg-white rounded-2xl p-8 h-full shadow-lg hover:shadow-2xl transition-all duration-300 border border-[#456146]/10 hover:border-[#456146]/30">
+                  <div className="w-16 h-16 bg-gradient-to-br from-[#456146] to-[#567557] rounded-2xl flex items-center justify-center text-white mb-6 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300 shadow-md">
+                    <Icon size={32} strokeWidth={2} />
                   </div>
+                  <h3 className="text-xl md:text-2xl font-bold text-[#2a3a2b] mb-4">
+                    {item.title}
+                  </h3>
+                  <p className="text-[#5a5a5a] leading-relaxed">
+                    {item.description}
+                  </p>
                 </div>
-                <h3 className="text-xl md:text-2xl font-bold text-[#2a3a2b] mb-4">
-                  {item.title}
-                </h3>
-                <p className="text-[#5a5a5a] leading-relaxed text-base md:text-lg">
-                  {item.description}
-                </p>
               </motion.div>
             );
           })}

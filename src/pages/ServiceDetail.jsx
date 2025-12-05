@@ -34,9 +34,9 @@ const ServiceDetail = () => {
            <div className="absolute top-0 right-0 w-1/3 h-full bg-[#456146]/5 skew-x-12 translate-x-12" />
            
            <div className="container mx-auto px-4 relative z-10">
-             <Link to="/#services" className="inline-flex items-center text-[#5a5a5a] hover:text-[#456146] mb-8 transition-colors">
-               <ArrowLeft className="w-4 h-4 mr-2" />
-               Back to Services
+             <Link to="/#services" className="inline-flex items-center gap-2 text-[#456146] hover:text-[#567557] mb-8 transition-colors group font-medium border-b-2 border-transparent pb-1">
+               <ArrowLeft className="w-4 h-4 transition-transform group-hover:-translate-x-1" />
+               <span>Back to Services</span>
              </Link>
              
              <div className="flex flex-col md:flex-row items-center gap-12">
@@ -110,7 +110,7 @@ const ServiceDetail = () => {
               <div className="bg-[#f8f6f3] p-8 rounded-2xl border-2 border-[#456146]/20 text-center">
                 <h3 className="text-2xl font-bold text-[#2a3a2b] mb-4">Ready to upgrade?</h3>
                 <p className="text-[#5a5a5a] mb-6">
-                  Transform your home with our professional {service.title.toLowerCase()} installation.
+                  Transform your home with homebear.
                 </p>
                 <Link 
                   to="/#contact"

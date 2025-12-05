@@ -30,10 +30,6 @@ const Hero = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <div className="flex items-center gap-2 mb-4">
-              <Zap className="text-[#456146]" size={32} />
-              <span className="text-[#456146] font-semibold text-lg">Smart Home Automation, Inspired by the Bear</span>
-            </div>
             <h1 className="text-5xl md:text-6xl lg:text-6xl font-bold text-[#456146] mb-6 leading-tight">
               Welcome to<br />
               <span className="text-[#283431]">homebear</span>
@@ -71,6 +67,10 @@ const Hero = () => {
             <div className="relative">
               {/* Main feature highlight */}
               <div className="bg-gradient-to-br from-white/60 to-white/40 backdrop-blur-md rounded-3xl p-8 border border-white/60 shadow-2xl">
+                <div className="flex items-center gap-2 mb-6 pb-6 border-b border-[#456146]/10">
+                  <Zap className="text-[#456146]" size={24} />
+                  <h2 className="text-[#456146] font-bold text-lg">Smart Home Automation, Inspired by the Bear</h2>
+                </div>
                 <div className="space-y-6">
                   <div className="flex items-start gap-4">
                     <div className="w-12 h-12 bg-[#456146] rounded-2xl flex items-center justify-center flex-shrink-0">

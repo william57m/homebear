@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Mail, Phone, MapPin, Send } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, Shield, Smartphone, Cpu } from 'lucide-react';
 import { useToast } from '@/components/ui/use-toast';
 import { Button } from '@/components/ui/button';
 import { contactInfo } from '@/data/contactData';
@@ -63,14 +63,15 @@ const Contact = () => {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-12">
+        <div className="grid md:grid-cols-2 gap-8 items-start">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
+            className="flex flex-col h-full"
           >
-            <div className="bg-white rounded-2xl p-8 shadow-xl">
+            <div className="bg-white rounded-2xl p-8 shadow-xl h-full">
               <h3 className="text-2xl font-bold text-[#2a3a2b] mb-6">Send us a Message</h3>
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
@@ -83,7 +84,7 @@ const Contact = () => {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 rounded-lg border border-[#456146]/20 focus:border-[#456146] focus:ring-2 focus:ring-[#456146]/20 outline-none transition-all"
+                    className="w-full px-4 py-3 rounded-2xl border border-[#456146]/20 focus:border-[#456146] focus:ring-2 focus:ring-[#456146]/20 outline-none transition-all"
                     placeholder="John Smith"
                   />
                 </div>
@@ -98,7 +99,7 @@ const Contact = () => {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 rounded-lg border border-[#456146]/20 focus:border-[#456146] focus:ring-2 focus:ring-[#456146]/20 outline-none transition-all"
+                    className="w-full px-4 py-3 rounded-2xl border border-[#456146]/20 focus:border-[#456146] focus:ring-2 focus:ring-[#456146]/20 outline-none transition-all"
                     placeholder="john@example.com"
                   />
                 </div>
@@ -112,8 +113,8 @@ const Contact = () => {
                     name="phone"
                     value={formData.phone}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 rounded-lg border border-[#456146]/20 focus:border-[#456146] focus:ring-2 focus:ring-[#456146]/20 outline-none transition-all"
-                    placeholder="+1 (555) 123-4567"
+                    className="w-full px-4 py-3 rounded-2xl border border-[#456146]/20 focus:border-[#456146] focus:ring-2 focus:ring-[#456146]/20 outline-none transition-all"
+                    placeholder="+1 (604) 123-4567"
                   />
                 </div>
 
@@ -127,14 +128,14 @@ const Contact = () => {
                     onChange={handleChange}
                     required
                     rows="4"
-                    className="w-full px-4 py-3 rounded-lg border border-[#456146]/20 focus:border-[#456146] focus:ring-2 focus:ring-[#456146]/20 outline-none transition-all resize-none"
+                    className="w-full px-4 py-3 rounded-2xl border border-[#456146]/20 focus:border-[#456146] focus:ring-2 focus:ring-[#456146]/20 outline-none transition-all resize-none"
                     placeholder="Tell us about your project..."
                   />
                 </div>
 
                 <Button
                   type="submit"
-                  className="w-full bg-[#456146] hover:bg-[#567557] text-white py-6 rounded-lg font-semibold flex items-center justify-center gap-2 transition-all duration-300 transform hover:scale-105"
+                  className="w-full bg-[#456146] hover:bg-[#567557] text-white py-6 rounded-full font-semibold flex items-center justify-center gap-2 transition-all duration-300 transform hover:scale-105"
                 >
                   <Send size={20} />
                   Send Message
@@ -148,9 +149,9 @@ const Contact = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="space-y-8"
+            className="flex flex-col gap-8"
           >
-            <div className="bg-white rounded-2xl p-8 shadow-xl">
+            <div className="bg-white rounded-2xl p-8 shadow-xl flex-1">
               <h3 className="text-2xl font-bold text-[#2a3a2b] mb-6">Contact Information</h3>
               
               <div className="space-y-6">
@@ -160,7 +161,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <div className="font-semibold text-[#2a3a2b] mb-1">Phone</div>
-                    <div className="text-[#5a5a5a]">{contactInfo.phone}</div>
+                    <a href={`tel:${contactInfo.phone}`} className="text-[#456146] hover:text-[#567557] transition-colors hover:underline">{contactInfo.phone}</a>
                   </div>
                 </div>
 
@@ -170,7 +171,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <div className="font-semibold text-[#2a3a2b] mb-1">Email</div>
-                    <div className="text-[#5a5a5a]">{contactInfo.email}</div>
+                    <a href={`mailto:${contactInfo.email}`} className="text-[#456146] hover:text-[#567557] transition-colors hover:underline">{contactInfo.email}</a>
                   </div>
                 </div>
 
@@ -189,32 +190,35 @@ const Contact = () => {
               </div>
             </div>
 
-            <div className="bg-gradient-to-br from-[#456146] to-[#567557] rounded-2xl p-8 text-white shadow-xl">
+            <div className="bg-gradient-to-br from-[#456146] to-[#567557] rounded-2xl p-8 text-white shadow-xl flex-1">
               <h3 className="text-2xl font-bold mb-4">Why Choose homebear?</h3>
-              <ul className="space-y-3">
-                <li className="flex items-start gap-2">
-                  <div className="w-6 h-6 bg-white/20 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <span className="text-xs">✓</span>
+              <ul className="space-y-4">
+                <li className="flex items-center gap-3">
+                  <div className="w-10 h-10 bg-white/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                    <Shield size={20} />
                   </div>
-                  <span>Expert installation by certified technicians</span>
+                  <div className="flex-1">
+                    <div className="font-semibold">100% Local, 100% Private</div>
+                    <div className="text-sm text-white/90">Everything runs locally—no cloud, no data leaving your home.</div>
+                  </div>
                 </li>
-                <li className="flex items-start gap-2">
-                  <div className="w-6 h-6 bg-white/20 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <span className="text-xs">✓</span>
+                <li className="flex items-center gap-3">
+                  <div className="w-10 h-10 bg-white/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                    <Smartphone size={20} />
                   </div>
-                  <span>Energy-efficient solutions that save money</span>
+                  <div className="flex-1">
+                    <div className="font-semibold">One Platform, Not a Pile of Apps</div>
+                    <div className="text-sm text-white/90">All your devices unified in a single, seamless interface.</div>
+                  </div>
                 </li>
-                <li className="flex items-start gap-2">
-                  <div className="w-6 h-6 bg-white/20 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <span className="text-xs">✓</span>
+                <li className="flex items-center gap-3">
+                  <div className="w-10 h-10 bg-white/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                    <Cpu size={20} />
                   </div>
-                  <span>24/7 customer support and maintenance</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <div className="w-6 h-6 bg-white/20 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <span className="text-xs">✓</span>
+                  <div className="flex-1">
+                    <div className="font-semibold">Built on Long-Lasting Technologies</div>
+                    <div className="text-sm text-white/90">Future-proof standards like Zigbee, Thread, Z-Wave, and Wi-Fi.</div>
                   </div>
-                  <span>Customized solutions for every budget</span>
                 </li>
               </ul>
             </div>
