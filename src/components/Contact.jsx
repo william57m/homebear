@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Mail, Phone, MapPin, Send, Shield, Smartphone, Cpu, HelpCircle, ArrowRight } from 'lucide-react';
 import { useToast } from '@/components/ui/use-toast';
@@ -244,13 +245,13 @@ const Contact = () => {
               <p className="text-lg text-[#5a5a5a] mb-8 leading-relaxed">
                 Find answers to common questions about our services, pricing, installation process, privacy, and more in our comprehensive FAQ section.
               </p>
-              <a
-                href="/faq"
+              <Link
+                to="/faq"
                 className="inline-flex items-center gap-2 px-8 py-4 bg-[#456146] text-white rounded-full hover:bg-[#567557] transition-all duration-300 transform hover:scale-105 font-semibold shadow-lg"
               >
                 Visit our FAQ page
                 <ArrowRight size={20} />
-              </a>
+              </Link>
             </div>
           </div>
         </motion.div>
