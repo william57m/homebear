@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Mail, Phone, MapPin, Send, Shield, Smartphone, Cpu } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, Shield, Smartphone, Cpu, HelpCircle, ArrowRight } from 'lucide-react';
 import { useToast } from '@/components/ui/use-toast';
 import { Button } from '@/components/ui/button';
 import { contactInfo } from '@/data/contactData';
@@ -224,6 +224,36 @@ const Contact = () => {
             </div>
           </motion.div>
         </div>
+
+        {/* FAQ Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+          className="mt-16"
+        >
+          <div className="bg-gradient-to-br from-[#f8f6f3] to-white rounded-2xl p-8 md:p-12 shadow-xl border border-[#456146]/10 text-center group hover:shadow-2xl transition-all duration-300">
+            <div className="max-w-3xl mx-auto">
+              <div className="w-16 h-16 bg-[#456146] rounded-2xl flex items-center justify-center mx-auto mb-6 transition-transform duration-300 group-hover:rotate-3 group-hover:scale-110">
+                <HelpCircle className="text-white" size={32} />
+              </div>
+              <h3 className="text-3xl md:text-4xl font-bold text-[#2a3a2b] mb-4">
+                Have Questions?
+              </h3>
+              <p className="text-lg text-[#5a5a5a] mb-8 leading-relaxed">
+                Find answers to common questions about our services, pricing, installation process, privacy, and more in our comprehensive FAQ section.
+              </p>
+              <a
+                href="/faq"
+                className="inline-flex items-center gap-2 px-8 py-4 bg-[#456146] text-white rounded-full hover:bg-[#567557] transition-all duration-300 transform hover:scale-105 font-semibold shadow-lg"
+              >
+                Visit our FAQ page
+                <ArrowRight size={20} />
+              </a>
+            </div>
+          </div>
+        </motion.div>
       </div>
     </section>
   );

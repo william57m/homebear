@@ -33,11 +33,12 @@ const Footer = () => {
           <div>
             <span className="text-lg font-semibold mb-4 block text-[#456146]">Services</span>
             <ul className="space-y-2 text-gray-400">
-              <li><a href="#services" className="hover:text-white transition-colors">Smart Lighting</a></li>
-              <li><a href="#services" className="hover:text-white transition-colors">Automated Blinds</a></li>
-              <li><a href="#services" className="hover:text-white transition-colors">Climate Control</a></li>
-              <li><a href="#services" className="hover:text-white transition-colors">Multi-Room Audio</a></li>
-              <li><a href="#services" className="hover:text-white transition-colors">Security Systems</a></li>
+              <li><a href="/#services" className="hover:text-white transition-colors">Climate Control</a></li>
+              <li><a href="/#services" className="hover:text-white transition-colors">Smart Lighting</a></li>
+              <li><a href="/#services" className="hover:text-white transition-colors">Security Systems</a></li>
+              <li><a href="/#services" className="hover:text-white transition-colors">Automated Blinds</a></li>
+              <li><a href="/#services" className="hover:text-white transition-colors">Multi-Room Audio</a></li>
+              <li><a href="/#services" className="hover:text-white transition-colors">Custom Dashboard</a></li>
             </ul>
           </div>
 
@@ -45,7 +46,7 @@ const Footer = () => {
             <span className="text-lg font-semibold mb-4 block text-[#456146]">Company</span>
             <ul className="space-y-2 text-gray-400">
               <li><a href="#" className="hover:text-white transition-colors">About Us</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Our Team</a></li>
+              <li><a href="/faq" className="hover:text-white transition-colors">FAQ</a></li>
               <li><a href="#" className="hover:text-white transition-colors">Blog</a></li>
               <li><a href="#contact" className="hover:text-white transition-colors">Contact</a></li>
             </ul>

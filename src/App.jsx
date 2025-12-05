@@ -5,6 +5,7 @@ import Footer from '@/components/Footer';
 import { Toaster } from '@/components/ui/toaster';
 import Home from '@/pages/Home';
 import ServiceDetail from '@/pages/ServiceDetail';
+import FAQ from '@/pages/FAQ';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/services/:slug" element={<ServiceDetail />} />
+          <Route path="/faq" element={<FAQ />} />
         </Routes>
       </main>
       <Footer />
