@@ -1,9 +1,9 @@
 import { Lightbulb, Blinds, Thermometer, Music, Shield, LayoutDashboard } from 'lucide-react';
-import alarmImage from '@/images/services/alarm2.png';
+import alarmImage from '@/images/services/alarm.png';
 import audioImage from '@/images/services/audio.jpg';
+import blindsImage from '@/images/services/blinds.png';
 import dashboardImage from '@/images/services/dashboard.png';
 import climateImage from '@/images/services/climate.jpg';
-import blindsImage from '@/images/services/blinds.png';
 import lightsImage from '@/images/services/lights.jpg';
 
 export const servicesData = [
