@@ -1,4 +1,10 @@
 import { Lightbulb, Blinds, Thermometer, Music, Shield, LayoutDashboard } from 'lucide-react';
+import alarmImage from '@/images/services/alarm2.png';
+import audioImage from '@/images/services/audio.jpg';
+import dashboardImage from '@/images/services/dashboard.png';
+import climateImage from '@/images/services/climate.jpg';
+import blindsImage from '@/images/services/blinds.png';
+import lightsImage from '@/images/services/lights.jpg';
 
 export const servicesData = [
   {
@@ -13,7 +19,8 @@ export const servicesData = [
       "Adaptive Intelligence: The system senses your routine and adapts to your lifestyle for peak efficiency and comfort.",
       "Voice Control Integration: Easily adjust temperatures using your voice."
     ],
-    features: ["Efficient, Cost-Saving Climate Management", "Energy-Smart Window & Door Detection", "Adaptive Temperature Automation", "Real-Time Monitoring & Insights", "Geofencing"]
+    features: ["Efficient, Cost-Saving Climate Management", "Energy-Smart Window & Door Detection", "Adaptive Temperature Automation", "Real-Time Monitoring & Insights", "Geofencing"],
+    image: climateImage
   },
   {
     id: 'smart-lighting',
@@ -27,7 +34,8 @@ export const servicesData = [
       "Wellness: Circadian rhythm lighting helps regulate your sleep cycle.",
       "Convenience: Voice control and automation mean never flipping a switch again."
     ],
-    features: ["Voice control integration", "Presence detection / Automated schedules", "Color temperature adjustment", "Motion sensing", "Scene creation"]
+    features: ["Voice control integration", "Presence detection / Automated schedules", "Color temperature adjustment", "Motion sensing", "Scene creation"],
+    image: lightsImage
   },
   {
     id: 'security-systems',
@@ -41,7 +49,8 @@ export const servicesData = [
       "Peace of Mind: Constant monitoring of your property.",
       "Insurance Discounts: Many insurers offer lower rates for monitored homes."
     ],
-    features: ["Integrated smart locks", "Instant security notifications", "Smart person detection", "Video history", "Comprehensive sensing: Door, window, and presence"]
+    features: ["Integrated smart locks", "Instant security notifications", "Smart person detection", "Video history", "Comprehensive sensing: Door, window, and presence"],
+    image: alarmImage
   },
   {
     id: 'automated-blinds',
@@ -55,7 +64,8 @@ export const servicesData = [
       "Simplified Routine and Privacy: Use gentle, natural light to wake up easily and manage instant privacy exactly when you need it with simple digital controls.",
       "Effortless Convenience: Automate your environment completely, meaning you never have to manually adjust blinds again—simply set it and forget it."
     ],
-    features: ["Dynamic Light Adjustment", "Personalized Scheduling", "One-Tap Privacy", "Gentle Wake-Up", "Voice Control Compatible"]
+    features: ["Dynamic Light Adjustment", "Personalized Scheduling", "One-Tap Privacy", "Gentle Wake-Up", "Voice Control Compatible"],
+    image: blindsImage
   },
   {
     id: 'multi-room-audio',
@@ -69,7 +79,8 @@ export const servicesData = [
       "Effortless Integration: Seamlessly connect and manage all the components of your multi-room audio system from a unified platform.",
       "Ambiance Automation: Integrate music playback into your smart home routines, such as automatically starting a relaxation playlist when your smart lighting dims in the evening."
     ],
-    features: ["Whole-home audio sync", "Voice commands", "Multi-User Control", "Streaming service integration", "Party mode"]
+    features: ["Whole-home audio sync", "Voice commands", "Multi-User Control", "Streaming service integration", "Party mode"],
+    image: audioImage
   },
   {
     id: 'custom-dashboard',
@@ -83,6 +94,7 @@ export const servicesData = [
       "Routine Integration: Trigger complex scenes like 'Good Morning' or 'Leaving' automatically based on your established routines and actions.",
       "Insight: Visualize energy usage and home health data clearly."
     ],
-    features: ["Personalized layout", "Adaptive display modes", "Real-time data visualization", "Touchscreen wall controllers", "Multi-user profiles"]
+    features: ["Personalized layout", "Adaptive display modes", "Real-time data visualization", "Touchscreen wall controllers", "Multi-user profiles"],
+    image: dashboardImage
   }
 ];

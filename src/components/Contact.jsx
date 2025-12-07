@@ -86,7 +86,7 @@ const Contact = () => {
                     onChange={handleChange}
                     required
                     className="w-full px-4 py-3 rounded-2xl border border-[#456146]/20 focus:border-[#456146] focus:ring-2 focus:ring-[#456146]/20 outline-none transition-all"
-                    placeholder="John Smith"
+                    placeholder="Grizz Lee"
                   />
                 </div>
 
@@ -101,7 +101,7 @@ const Contact = () => {
                     onChange={handleChange}
                     required
                     className="w-full px-4 py-3 rounded-2xl border border-[#456146]/20 focus:border-[#456146] focus:ring-2 focus:ring-[#456146]/20 outline-none transition-all"
-                    placeholder="john@example.com"
+                    placeholder="grizzlee@example.com"
                   />
                 </div>
 
@@ -192,7 +192,7 @@ const Contact = () => {
             </div>
 
             <div className="bg-gradient-to-br from-[#456146] to-[#567557] rounded-2xl p-8 text-white shadow-xl flex-1">
-              <h3 className="text-2xl font-bold mb-4">Why Choose homebear?</h3>
+              <h3 className="text-2xl font-bold mb-4">Why choose homebear?</h3>
               <ul className="space-y-4">
                 <li className="flex items-center gap-3">
                   <div className="w-10 h-10 bg-white/20 rounded-xl flex items-center justify-center flex-shrink-0">

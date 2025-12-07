@@ -52,8 +52,12 @@ const ServiceDetail = () => {
                  </p>
                </div>
                <div className="flex-1 w-full">
-                 <div className="rounded-3xl overflow-hidden shadow-2xl">
-                   <img alt={`${service.title} demonstration`} src="https://images.unsplash.com/photo-1634967389630-b6bbab0fab7e" />
+                 <div className="rounded-3xl overflow-hidden shadow-2xl h-[500px]">
+                   <img 
+                     alt={`${service.title} demonstration`} 
+                     src={service.image}
+                     className="w-full h-full object-cover"
+                   />
                  </div>
                </div>
              </div>
