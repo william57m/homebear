@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Zap } from 'lucide-react';
+import { Shield, Smartphone, Zap, CheckCircle2 } from 'lucide-react';
 import heroImage from '@/images/hero.png';
 
 const Hero = () => {
@@ -11,39 +11,92 @@ const Hero = () => {
     }
   };
 
+  const features = [
+    { icon: Shield, title: "100% Local & Private" },
+    { icon: Smartphone, title: "One Unified Platform" },
+    { icon: Zap, title: "Future-Proof Tech" },
+  ];
+
   return (
-    <section id="hero" className="relative pt-32 pb-20 px-4 min-h-[90vh] flex items-center overflow-hidden">
-      {/* Background Image */}
+    <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 pb-16 px-4">
+      {/* Full Background Image with Darker Overlay */}
       <div className="absolute inset-0 z-0">
         <img 
           src={heroImage}
-          alt="Modern smart home" 
+          alt="Modern smart home with homebear automation" 
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-white/80 via-white/70 to-white/70"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-[#2a3a2b]/90 via-[#2a3a2b]/40 to-transparent"></div>
       </div>
 
-      <div className="container mx-auto relative z-10">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
+      {/* Centered Content */}
+      <div className="container mx-auto px-4 sm:px-6 md:px-8 relative z-10 text-center">
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="max-w-4xl mx-auto"
+        >
+
+          {/* Main Headline */}
+          <motion.h1
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.3, duration: 0.8 }}
+            className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight"
           >
-            <h1 className="text-5xl md:text-6xl lg:text-6xl font-bold text-[#456146] mb-6 leading-tight">
-              Welcome to<br />
-              <span className="text-[#283431]">homebear</span>
-            </h1>
-            <p className="text-xl text-[#5a5a5a] mb-8 leading-relaxed max-w-xl">
-              The bear is one of nature's best examples of energy efficiency and adaptation. Homebear brings that same instinctive intelligence to your home with personalized, fully local home-automation services that make your life at home smoother, safer, and more efficient.
-            </p>
-            <div className="flex flex-wrap gap-4">
-              <button
-                onClick={scrollToContact}
-                className="bg-[#456146] text-white px-8 py-4 rounded-full hover:bg-[#567557] transition-all duration-300 transform hover:scale-105 font-semibold shadow-lg"
-              >
-                Get Started
-              </button>
+            Smart Home Automation,
+            <br />
+            <span className="text-[#f8f6f3]">Naturally Intelligent</span>
+          </motion.h1>
+          
+          {/* Description */}
+          <motion.p
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.5, duration: 0.8 }}
+            className="text-xl md:text-2xl text-white/90 mb-12 leading-relaxed max-w-3xl mx-auto"
+          >
+            The bear is one of nature's best examples of energy efficiency, and homebear brings that same instinctive, fully local intelligence to your home with private, secure automation tailored to Vancouver living.
+          </motion.p>
+
+          {/* Feature Badges Grid */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.7, duration: 0.8 }}
+            className="grid grid-cols-1 sm:grid-cols-3 gap-8 mb-12 max-w-2xl mx-auto"
+          >
+            {features.map((feature, index) => {
+              const Icon = feature.icon;
+              return (
+                <motion.div
+                  key={index}
+                  whileHover={{ scale: 1.1, y: -5 }}
+                  className="text-center"
+                >
+                  <Icon className="w-12 h-12 text-white mx-auto mb-4" strokeWidth={1.5} />
+                  <h3 className="font-bold text-white text-sm">{feature.title}</h3>
+                </motion.div>
+              );
+            })}
+          </motion.div>
+
+          {/* Single Prominent CTA */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.9, duration: 0.8 }}
+          >
+            <button
+              onClick={scrollToContact}
+              className="bg-white text-[#456146] px-12 py-5 rounded-full hover:bg-[#f8f6f3] transition-all duration-300 transform hover:scale-105 font-bold shadow-2xl inline-flex items-center gap-2"
+            >
+              Get your free consultation
+            </button>
+            
+            {/* Secondary Link */}
+            <div className="mt-6">
               <button
                 onClick={() => {
                   const element = document.getElementById('services');
@@ -51,77 +104,13 @@ const Hero = () => {
                     element.scrollIntoView({ behavior: 'smooth' });
                   }
                 }}
-                className="border-2 border-[#456146] text-[#456146] bg-white/50 backdrop-blur-sm px-8 py-4 rounded-full hover:bg-[#456146] hover:text-white transition-all duration-300 transform hover:scale-105 font-semibold"
+                className="text-white/90 hover:text-white font-medium transition-colors underline underline-offset-4"
               >
-                Learn More
+                Explore our services
               </button>
             </div>
           </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
-            className="hidden md:block"
-          >
-            <div className="relative">
-              {/* Main feature highlight */}
-              <div className="bg-gradient-to-br from-white/60 to-white/40 backdrop-blur-md rounded-3xl p-8 border border-white/60 shadow-2xl">
-                <div className="flex items-center gap-2 mb-6 pb-6 border-b border-[#456146]/10">
-                  <Zap className="text-[#456146]" size={24} />
-                  <h2 className="text-[#456146] font-bold text-lg">Smart Home Automation, Inspired by the Bear</h2>
-                </div>
-                <div className="space-y-6">
-                  <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 bg-[#456146] rounded-2xl flex items-center justify-center flex-shrink-0">
-                      <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                      </svg>
-                    </div>
-                    <div className="flex-1">
-                      <h3 className="text-lg font-bold text-[#456146]">100% Local & Private</h3>
-                      <p className="text-sm text-[#5a5a5a] leading-relaxed">Your data stays in your home. No cloud, no subscriptions, complete control.</p>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 bg-[#456146] rounded-2xl flex items-center justify-center flex-shrink-0">
-                      <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
-                      </svg>
-                    </div>
-                    <div className="flex-1">
-                      <h3 className="text-lg font-bold text-[#456146]">One Platform</h3>
-                      <p className="text-sm text-[#5a5a5a] leading-relaxed">Control everything from a single app. Simple, elegant, powerful.</p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 bg-[#456146] rounded-2xl flex items-center justify-center flex-shrink-0">
-                      <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                      </svg>
-                    </div>
-                    <div className="flex-1">
-                      <h3 className="text-lg font-bold text-[#456146]">Built to Last</h3>
-                      <p className="text-sm text-[#5a5a5a] leading-relaxed">Open-source technologies that won't become obsolete.</p>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Location badge */}
-                <div className="mt-6 pt-6 border-t border-[#456146]/10">
-                  <div className="flex items-center gap-2 text-sm text-[#5a5a5a]">
-                    <svg className="w-4 h-4 text-[#456146]" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
-                    </svg>
-                    <span>Serving Vancouver and surrounding areas</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </motion.div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

@@ -12,7 +12,7 @@ const Header = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
+      setIsScrolled(window.scrollY > 40);
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
@@ -42,12 +42,15 @@ const Header = () => {
     }
   };
 
+  // Determine if we should use transparent header (only on home page when not scrolled)
+  const isTransparent = location.pathname === '/' && !isScrolled;
+
   return (
     <motion.header
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-white/95 backdrop-blur-sm shadow-md' : 'bg-transparent'
+        !isTransparent ? 'bg-white/95 backdrop-blur-sm shadow-md' : 'bg-transparent'
       }`}
     >
       <nav className="container mx-auto px-4 py-4">
@@ -62,28 +65,38 @@ const Header = () => {
             <img 
               src={logo}
               alt="homebear logo" 
-              className="w-10 h-10 object-contain"
+              className={`w-10 h-10 object-contain transition-all duration-300 ${
+                !isTransparent ? '' : 'brightness-0 invert'
+              }`}
             />
-            <span className="text-2xl pt-3 font-bold text-[#283431] font-sofia-pro">homebear</span>
+            <span className={`text-2xl pt-3 font-bold font-sofia-pro transition-colors duration-300 ${
+              !isTransparent ? 'text-[#283431]' : 'text-white'
+            }`}>homebear</span>
           </motion.div>
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center gap-8">
             <button
               onClick={() => handleNavigation('hero')}
-              className="text-[#2a3a2b] hover:text-[#456146] transition-colors font-medium"
+              className={`transition-colors font-medium ${
+                !isTransparent ? 'text-[#2a3a2b] hover:text-[#456146]' : 'text-white hover:text-[#f8f6f3]'
+              }`}
             >
               Home
             </button>
             <button
               onClick={() => handleNavigation('services')}
-              className="text-[#2a3a2b] hover:text-[#456146] transition-colors font-medium"
+              className={`transition-colors font-medium ${
+                !isTransparent ? 'text-[#2a3a2b] hover:text-[#456146]' : 'text-white hover:text-[#f8f6f3]'
+              }`}
             >
               Services
             </button>
             <button
               onClick={() => handleNavigation('smart-scenarios')}
-              className="text-[#2a3a2b] hover:text-[#456146] transition-colors font-medium"
+              className={`transition-colors font-medium ${
+                !isTransparent ? 'text-[#2a3a2b] hover:text-[#456146]' : 'text-white hover:text-[#f8f6f3]'
+              }`}
             >
               Scenarios
             </button>
@@ -98,9 +111,11 @@ const Header = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden text-[#456146] p-2"
+            className={`md:hidden p-2 transition-colors ${
+              !isTransparent ? 'text-[#2a3a2b] hover:text-[#456146]' : 'text-white hover:text-[#f8f6f3]'
+            }`}
           >
-            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
           </button>
         </div>
 
