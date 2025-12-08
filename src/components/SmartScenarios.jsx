@@ -7,6 +7,14 @@ const SmartScenarios = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
 
+  // Preload all scenario images
+  useEffect(() => {
+    scenarios.forEach((scenario) => {
+      const img = new Image();
+      img.src = scenario.image;
+    });
+  }, []);
+
   useEffect(() => {
     if (isPaused) return;
     
@@ -125,37 +133,58 @@ const SmartScenarios = () => {
             </motion.div>
           </AnimatePresence>
 
-          {/* Navigation Arrows */}
+          {/* Navigation Arrows - Desktop Only */}
           <button
             onClick={goToPrevious}
-            className="absolute left-6 md:left-8 top-1/2 -translate-y-1/2 w-14 h-14 bg-white/95 hover:bg-[#456146] rounded-full shadow-xl flex items-center justify-center text-[#456146] hover:text-white transition-all hover:scale-110 z-10"
+            className="hidden md:flex absolute left-8 top-1/2 -translate-y-1/2 w-14 h-14 bg-white/95 hover:bg-[#456146] rounded-full shadow-xl items-center justify-center text-[#456146] hover:text-white transition-all hover:scale-110 z-10"
             aria-label="Previous scenario"
           >
             <ChevronLeft size={28} strokeWidth={2.5} />
           </button>
           <button
             onClick={goToNext}
-            className="absolute right-6 md:right-8 top-1/2 -translate-y-1/2 w-14 h-14 bg-white/95 hover:bg-[#456146] rounded-full shadow-xl flex items-center justify-center text-[#456146] hover:text-white transition-all hover:scale-110 z-10"
+            className="hidden md:flex absolute right-8 top-1/2 -translate-y-1/2 w-14 h-14 bg-white/95 hover:bg-[#456146] rounded-full shadow-xl items-center justify-center text-[#456146] hover:text-white transition-all hover:scale-110 z-10"
             aria-label="Next scenario"
           >
             <ChevronRight size={28} strokeWidth={2.5} />
           </button>
         </div>
 
-        {/* Dots Indicator */}
-        <div className="flex justify-center gap-3 mt-10">
-          {scenarios.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => goToSlide(index)}
-              className={`transition-all duration-300 rounded-full ${
-                index === currentIndex 
-                  ? 'w-10 h-3.5 bg-[#456146] shadow-md' 
-                  : 'w-3.5 h-3.5 bg-[#456146]/25 hover:bg-[#456146]/50'
-              }`}
-              aria-label={`Go to scenario ${index + 1}`}
-            />
-          ))}
+        {/* Dots Indicator with Mobile Navigation */}
+        <div className="flex justify-center items-center gap-4 mt-10">
+          {/* Previous Button - Mobile Only */}
+          <button
+            onClick={goToPrevious}
+            className="md:hidden w-10 h-10 bg-white hover:bg-[#456146] rounded-full shadow-lg flex items-center justify-center text-[#456146] hover:text-white transition-all"
+            aria-label="Previous scenario"
+          >
+            <ChevronLeft size={20} strokeWidth={2.5} />
+          </button>
+
+          {/* Dots */}
+          <div className="flex gap-3">
+            {scenarios.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => goToSlide(index)}
+                className={`transition-all duration-300 rounded-full ${
+                  index === currentIndex 
+                    ? 'w-10 h-3.5 bg-[#456146] shadow-md' 
+                    : 'w-3.5 h-3.5 bg-[#456146]/25 hover:bg-[#456146]/50'
+                }`}
+                aria-label={`Go to scenario ${index + 1}`}
+              />
+            ))}
+          </div>
+
+          {/* Next Button - Mobile Only */}
+          <button
+            onClick={goToNext}
+            className="md:hidden w-10 h-10 bg-white hover:bg-[#456146] rounded-full shadow-lg flex items-center justify-center text-[#456146] hover:text-white transition-all"
+            aria-label="Next scenario"
+          >
+            <ChevronRight size={20} strokeWidth={2.5} />
+          </button>
         </div>
       </div>
     </section>

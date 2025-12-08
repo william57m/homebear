@@ -28,6 +28,10 @@ export const faqs = [
         answer: "Yes! We work with a wide range of smart devices and protocols including Zigbee, Z-Wave, Thread, Wi-Fi, and many proprietary systems. During consultation, we'll assess your existing devices and if possible integrate them into your unified homebear system."
       },
       {
+        question: "What installations does homebear cover?",
+        answer: "We handle the installation of most devices that don't require specialized trades. As home-automation specialists, homebear focuses on setting up, configuring, and connecting the smart components that bring your system to life.\n\nHowever, some products - like motorized blinds, in-ceiling speakers, wiring, or other components that require certified expertise - need to be installed by licensed professionals. We believe every trade has its own specialty, and homebear's is home automation at its finest. For these tasks, we rely on trusted partners who ensure everything is installed safely.\n\nOnce those elements are in place, homebear brings it all together. We configure your system, and ensure every component communicates seamlessly. Our goal is to create a unified, intelligent home experience where all your devices work in perfect harmony, no matter the brand or technology."
+      },
+      {
         question: "Will installation require major renovations?",
         answer: "Installations are non-invasive. We primarily use wireless protocols that don't require running new wires through walls. For lighting and switches, we work with your existing electrical infrastructure. Any necessary modifications are discussed and approved before work begins."
       }
