@@ -26,7 +26,7 @@ const Hero = () => {
           alt="Modern smart home with homebear automation" 
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#2a3a2b]/90 via-[#2a3a2b]/40 to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-[#182619]/90 via-[#182619]/40 to-[#182619]/20"></div>
       </div>
 
       {/* Centered Content */}
@@ -43,11 +43,9 @@ const Hero = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3, duration: 0.8 }}
-            className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight"
+            className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight"
           >
-            Smart Home Automation,
-            <br />
-            <span className="text-[#f8f6f3]">Naturally Intelligent</span>
+            Instinctive Home Automation
           </motion.h1>
           
           {/* Description */}
@@ -57,7 +55,7 @@ const Hero = () => {
             transition={{ delay: 0.5, duration: 0.8 }}
             className="text-xl md:text-2xl text-white/90 mb-12 leading-relaxed max-w-3xl mx-auto"
           >
-            The bear is one of nature's best examples of energy efficiency, and homebear brings that same instinctive, fully local intelligence to your home with private, secure automation tailored to Vancouver living.
+            Homebear combines the bear's natural efficiency with instinctive, fully local automation. Secure, private smart home solutions designed specifically for Vancouver living.
           </motion.p>
 
           {/* Feature Badges Grid */}

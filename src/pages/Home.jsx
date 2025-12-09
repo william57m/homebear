@@ -24,8 +24,8 @@ const Home = () => {
   return (
     <>
       <Hero />
-      <Services />
       <SmartScenarios />
+      <Services />
       <Difference />
       <Contact />
     </>
