@@ -41,8 +41,8 @@ const SmartScenarios = () => {
   const Icon = currentScenario.icon;
 
   return (
-    <section id="smart-scenarios" className="py-20 bg-[#f8f6f3]">
-      <div className="container mx-auto max-w-full px-4 md:px-8 lg:px-16 mb-16">
+    <section id="smart-scenarios" className="py-20 bg-homebear-beige">
+      <div className="container mx-auto px-4 mb-16">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -50,10 +50,10 @@ const SmartScenarios = () => {
           transition={{ duration: 0.6 }}
           className="text-center"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-[#2a3a2b] mb-4">
-            Smart Scenarios That <span className="text-[#456146]">Adapt to Your Life</span>
+          <h2 className="text-4xl md:text-5xl font-bold text-homebear-dark mb-4">
+            Smart Scenarios That <span className="text-homebear-green-brand">Adapt to Your Life</span>
           </h2>
-          <p className="text-lg text-[#5a5a5a] max-w-2xl mx-auto">
+          <p className="text-lg text-homebear-gray max-w-2xl mx-auto">
             Experience true automation where your home anticipates your needs before you even ask.
           </p>
         </motion.div>
@@ -99,14 +99,14 @@ const SmartScenarios = () => {
                   >
                     <div className="flex items-center gap-4 mb-6">
                       {/* Icon next to title */}
-                      <div className="w-14 h-14 md:w-16 md:h-16 bg-[#456146]/10 rounded-2xl flex items-center justify-center text-[#456146] flex-shrink-0">
+                      <div className="w-14 h-14 md:w-16 md:h-16 bg-homebear-green-brand/10 rounded-2xl flex items-center justify-center text-homebear-green-brand flex-shrink-0">
                         <Icon size={32} strokeWidth={2} />
                       </div>
-                      <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#2a3a2b]">
+                      <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold text-homebear-dark">
                         {currentScenario.title}
                       </h3>
                     </div>
-                    <p className="text-[#5a5a5a] leading-relaxed text-lg md:text-xl mb-8">
+                    <p className="text-homebear-gray leading-relaxed text-lg md:text-xl mb-8">
                       {currentScenario.description}
                     </p>
                     
@@ -120,10 +120,10 @@ const SmartScenarios = () => {
                           transition={{ delay: 0.4 + index * 0.1 }}
                           className="flex items-start gap-3"
                         >
-                          <div className="w-6 h-6 bg-[#456146]/10 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                            <Check size={16} className="text-[#456146]" strokeWidth={3} />
+                          <div className="w-6 h-6 bg-homebear-green-brand/10 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                            <Check size={16} className="text-homebear-green-brand" strokeWidth={3} />
                           </div>
-                          <span className="text-[#2a3a2b] text-base md:text-lg">{detail}</span>
+                          <span className="text-homebear-dark text-base md:text-lg">{detail}</span>
                         </motion.div>
                       ))}
                     </div>
@@ -136,14 +136,14 @@ const SmartScenarios = () => {
           {/* Navigation Arrows - Desktop Only */}
           <button
             onClick={goToPrevious}
-            className="hidden md:flex absolute left-8 top-1/2 -translate-y-1/2 w-14 h-14 bg-white/95 hover:bg-[#456146] rounded-full shadow-xl items-center justify-center text-[#456146] hover:text-white transition-all hover:scale-110 z-10"
+            className="hidden md:flex absolute left-8 top-1/2 -translate-y-1/2 w-14 h-14 bg-white/95 hover:bg-homebear-green-brand rounded-full shadow-xl items-center justify-center text-homebear-green-brand hover:text-white transition-all hover:scale-110 z-10"
             aria-label="Previous scenario"
           >
             <ChevronLeft size={28} strokeWidth={2.5} />
           </button>
           <button
             onClick={goToNext}
-            className="hidden md:flex absolute right-8 top-1/2 -translate-y-1/2 w-14 h-14 bg-white/95 hover:bg-[#456146] rounded-full shadow-xl items-center justify-center text-[#456146] hover:text-white transition-all hover:scale-110 z-10"
+            className="hidden md:flex absolute right-8 top-1/2 -translate-y-1/2 w-14 h-14 bg-white/95 hover:bg-homebear-green-brand rounded-full shadow-xl items-center justify-center text-homebear-green-brand hover:text-white transition-all hover:scale-110 z-10"
             aria-label="Next scenario"
           >
             <ChevronRight size={28} strokeWidth={2.5} />
@@ -155,7 +155,7 @@ const SmartScenarios = () => {
           {/* Previous Button - Mobile Only */}
           <button
             onClick={goToPrevious}
-            className="md:hidden w-10 h-10 bg-white hover:bg-[#456146] rounded-full shadow-lg flex items-center justify-center text-[#456146] hover:text-white transition-all"
+            className="md:hidden w-10 h-10 bg-white hover:bg-homebear-green-brand rounded-full shadow-lg flex items-center justify-center text-homebear-green-brand hover:text-white transition-all"
             aria-label="Previous scenario"
           >
             <ChevronLeft size={20} strokeWidth={2.5} />
@@ -169,8 +169,8 @@ const SmartScenarios = () => {
                 onClick={() => goToSlide(index)}
                 className={`transition-all duration-300 rounded-full ${
                   index === currentIndex 
-                    ? 'w-10 h-3.5 bg-[#456146] shadow-md' 
-                    : 'w-3.5 h-3.5 bg-[#456146]/25 hover:bg-[#456146]/50'
+                    ? 'w-10 h-3.5 bg-homebear-green-brand shadow-md' 
+                    : 'w-3.5 h-3.5 bg-homebear-green-brand/25 hover:bg-homebear-green-brand/50'
                 }`}
                 aria-label={`Go to scenario ${index + 1}`}
               />
@@ -180,7 +180,7 @@ const SmartScenarios = () => {
           {/* Next Button - Mobile Only */}
           <button
             onClick={goToNext}
-            className="md:hidden w-10 h-10 bg-white hover:bg-[#456146] rounded-full shadow-lg flex items-center justify-center text-[#456146] hover:text-white transition-all"
+            className="md:hidden w-10 h-10 bg-white hover:bg-homebear-green-brand rounded-full shadow-lg flex items-center justify-center text-homebear-green-brand hover:text-white transition-all"
             aria-label="Next scenario"
           >
             <ChevronRight size={20} strokeWidth={2.5} />

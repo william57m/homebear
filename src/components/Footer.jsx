@@ -7,7 +7,7 @@ import { servicesData } from '@/data/servicesData';
 
 const Footer = () => {
   return (
-    <footer className="bg-[#2a3a2b] text-white py-12 px-4">
+    <footer className="bg-homebear-dark text-white py-12 px-4">
       <div className="container mx-auto">
         <div className="grid md:grid-cols-4 gap-8 mb-8">
           <div>
@@ -23,17 +23,17 @@ const Footer = () => {
               {companyInfo.tagline}
             </p>
             <div className="flex gap-3">
-              <a href="#" className="w-10 h-10 bg-[#456146]/20 hover:bg-[#456146] rounded-full flex items-center justify-center transition-colors">
+              <a href="#" className="w-10 h-10 bg-homebear-green-brand/20 hover:bg-homebear-green-brand rounded-full flex items-center justify-center transition-colors">
                 <Facebook size={18} />
               </a>
-              <a href="#" className="w-10 h-10 bg-[#456146]/20 hover:bg-[#456146] rounded-full flex items-center justify-center transition-colors">
+              <a href="#" className="w-10 h-10 bg-homebear-green-brand/20 hover:bg-homebear-green-brand rounded-full flex items-center justify-center transition-colors">
                 <Instagram size={18} />
               </a>
             </div>
           </div>
 
           <div>
-            <span className="text-lg font-semibold mb-4 block text-[#456146]">Services</span>
+            <span className="text-lg font-semibold mb-4 block text-homebear-beige">Services</span>
             <ul className="space-y-2 text-gray-400">
               {servicesData.map((service) => (
                 <li key={service.id}>
@@ -46,7 +46,7 @@ const Footer = () => {
           </div>
 
           <div>
-            <span className="text-lg font-semibold mb-4 block text-[#456146]">Company</span>
+            <span className="text-lg font-semibold mb-4 block text-homebear-beige">Company</span>
             <ul className="space-y-2 text-gray-400">
               <li><a href="#" className="hover:text-white transition-colors">About Us [TO CREATE]</a></li>
               <li><a href="#" className="hover:text-white transition-colors">Blog [TO CREATE]</a></li>
@@ -56,7 +56,7 @@ const Footer = () => {
           </div>
 
           <div>
-            <span className="text-lg font-semibold mb-4 block text-[#456146]">Contact</span>
+            <span className="text-lg font-semibold mb-4 block text-homebear-beige">Contact</span>
             <ul className="space-y-2 text-gray-400">
               <li>{contactInfo.address.street}</li>
               <li>{contactInfo.address.city}, {contactInfo.address.state} {contactInfo.address.zip}</li>

@@ -22,8 +22,8 @@ const differences = [
 
 const Difference = () => {
   return (
-    <section className="py-16 px-4 bg-[#2a3a2b]">
-      <div className="container mx-auto max-w-5xl">
+    <section id="difference" className="py-20 bg-homebear-dark">
+      <div className="container mx-auto px-4 max-w-6xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -32,9 +32,9 @@ const Difference = () => {
           className="mb-12"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-2">
-            The <span className="text-[#8fb990]">homebear</span> difference
+            The <span className="text-homebear-green-pale">homebear</span> difference
           </h2>
-          <div className="w-16 h-1 bg-[#8fb990]"></div>
+          <div className="w-16 h-1 bg-homebear-green-pale"></div>
         </motion.div>
 
         <div className="grid md:grid-cols-3 gap-8">
@@ -51,12 +51,12 @@ const Difference = () => {
                 className="group relative"
               >
                 {/* Vertical accent line */}
-                <div className="absolute left-0 top-0 w-0.5 h-0 bg-[#8fb990] group-hover:h-full transition-all duration-500"></div>
+                <div className="absolute left-0 top-0 w-0.5 h-0 bg-homebear-green-pale group-hover:h-full transition-all duration-500"></div>
                 
                 <div className="pl-6">
                   {/* Icon */}
                   <div className="mb-4">
-                    <Icon size={28} strokeWidth={1.5} className="text-[#8fb990]" />
+                    <Icon size={28} strokeWidth={1.5} className="text-homebear-green-pale" />
                   </div>
                   
                   {/* Content */}

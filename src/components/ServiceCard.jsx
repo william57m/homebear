@@ -17,28 +17,28 @@ const ServiceCard = ({ service, index }) => {
     >
       <Link 
         to={`/services/${service.id}`}
-        className="group block h-full bg-gradient-to-br from-[#f8f6f3] to-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-[#456146]/10 flex flex-col"
+        className="group block h-full bg-gradient-to-br from-homebear-beige to-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-homebear-green-brand/10 flex flex-col"
       >
-        <div className="w-16 h-16 bg-[#456146] rounded-2xl flex items-center justify-center mb-6 transform transition-transform duration-300 group-hover:rotate-3 group-hover:scale-110">
+        <div className="w-16 h-16 bg-homebear-green-brand rounded-2xl flex items-center justify-center mb-6 transform transition-transform duration-300 group-hover:rotate-3 group-hover:scale-110">
           <Icon className="text-white" size={32} />
         </div>
         
-        <h3 className="text-2xl font-bold text-[#2a3a2b] mb-3">{service.title}</h3>
-        <p className="text-[#5a5a5a] mb-6 leading-relaxed flex-grow">{service.shortDescription}</p>
+        <h3 className="text-2xl font-bold text-homebear-dark mb-3">{service.title}</h3>
+        <p className="text-homebear-gray mb-6 leading-relaxed flex-grow">{service.shortDescription}</p>
         
         <div className="space-y-4 mt-auto">
           <div className="space-y-2">
             {service.features.slice(0, 3).map((feature, idx) => (
               <div key={idx} className="flex items-center gap-2">
-                <div className="w-5 h-5 bg-[#456146]/10 rounded-full flex items-center justify-center flex-shrink-0">
-                  <Check className="text-[#456146]" size={14} />
+                <div className="w-5 h-5 bg-homebear-green-brand/10 rounded-full flex items-center justify-center flex-shrink-0">
+                  <Check className="text-homebear-green-brand" size={14} />
                 </div>
-                <span className="text-sm text-[#5a5a5a]">{feature}</span>
+                <span className="text-sm text-homebear-gray">{feature}</span>
               </div>
             ))}
           </div>
           
-          <div className="pt-4 flex items-center text-[#456146] font-medium group">
+          <div className="pt-4 flex items-center text-homebear-green-brand font-medium group">
             Learn more 
             <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
           </div>

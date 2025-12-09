@@ -88,7 +88,7 @@ const Hero = () => {
           >
             <button
               onClick={scrollToContact}
-              className="bg-white text-[#456146] px-12 py-5 rounded-full hover:bg-[#f8f6f3] transition-all duration-300 transform hover:scale-105 font-bold shadow-2xl inline-flex items-center gap-2"
+              className="bg-white text-homebear-green-brand px-12 py-5 rounded-full hover:bg-homebear-beige transition-all duration-300 transform hover:scale-105 font-bold shadow-2xl inline-flex items-center gap-2"
             >
               Get your free consultation
             </button>

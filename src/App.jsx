@@ -9,7 +9,7 @@ import FAQ from '@/pages/FAQ';
 
 function App() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-[#f8f6f3] to-[#ede9e3]">
+    <div className="min-h-screen bg-gradient-to-b from-homebear-beige to-[#ede9e3]">
       <Header />
       <main>
         <Routes>

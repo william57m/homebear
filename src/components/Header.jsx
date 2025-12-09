@@ -79,7 +79,7 @@ const Header = () => {
             <button
               onClick={() => handleNavigation('hero')}
               className={`transition-colors font-medium ${
-                !isTransparent ? 'text-[#2a3a2b] hover:text-[#456146]' : 'text-white hover:text-[#f8f6f3]'
+                !isTransparent ? 'text-homebear-dark hover:text-homebear-green-brand' : 'text-white hover:text-homebear-beige'
               }`}
             >
               Home
@@ -87,7 +87,7 @@ const Header = () => {
             <button
               onClick={() => handleNavigation('services')}
               className={`transition-colors font-medium ${
-                !isTransparent ? 'text-[#2a3a2b] hover:text-[#456146]' : 'text-white hover:text-[#f8f6f3]'
+                !isTransparent ? 'text-homebear-dark hover:text-homebear-green-brand' : 'text-white hover:text-homebear-beige'
               }`}
             >
               Services
@@ -95,14 +95,14 @@ const Header = () => {
             <button
               onClick={() => handleNavigation('smart-scenarios')}
               className={`transition-colors font-medium ${
-                !isTransparent ? 'text-[#2a3a2b] hover:text-[#456146]' : 'text-white hover:text-[#f8f6f3]'
+                !isTransparent ? 'text-homebear-dark hover:text-homebear-green-brand' : 'text-white hover:text-homebear-beige'
               }`}
             >
               Scenarios
             </button>
             <button
               onClick={() => handleNavigation('contact')}
-              className="bg-[#456146] text-white px-6 py-2 rounded-full hover:bg-[#567557] transition-all duration-300 transform hover:scale-105 font-medium"
+              className="bg-homebear-green-brand text-white px-6 py-2 rounded-full hover:bg-homebear-green-light transition-all duration-300 transform hover:scale-105 font-medium"
             >
               Contact Us
             </button>
@@ -112,7 +112,7 @@ const Header = () => {
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             className={`md:hidden p-2 transition-colors ${
-              !isTransparent ? 'text-[#2a3a2b] hover:text-[#456146]' : 'text-white hover:text-[#f8f6f3]'
+              !isTransparent ? 'text-homebear-dark hover:text-homebear-green-brand' : 'text-white hover:text-homebear-beige'
             }`}
           >
             {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
@@ -129,25 +129,25 @@ const Header = () => {
             <div className="flex flex-col gap-4">
               <button
                 onClick={() => handleNavigation('hero')}
-                className="text-[#2a3a2b] hover:text-[#456146] transition-colors font-medium text-left"
+                className="text-homebear-dark hover:text-homebear-green-brand transition-colors font-medium text-left"
               >
                 Home
               </button>
               <button
                 onClick={() => handleNavigation('services')}
-                className="text-[#2a3a2b] hover:text-[#456146] transition-colors font-medium text-left"
+                className="text-homebear-dark hover:text-homebear-green-brand transition-colors font-medium text-left"
               >
                 Services
               </button>
               <button
                 onClick={() => handleNavigation('smart-scenarios')}
-                className="text-[#2a3a2b] hover:text-[#456146] transition-colors font-medium text-left"
+                className="text-homebear-dark hover:text-homebear-green-brand transition-colors font-medium text-left"
               >
                 Smart Scenarios
               </button>
               <button
                 onClick={() => handleNavigation('contact')}
-                className="bg-[#456146] text-white px-6 py-2 rounded-full hover:bg-[#567557] transition-all duration-300 font-medium"
+                className="bg-homebear-green-brand text-white px-6 py-2 rounded-full hover:bg-homebear-green-light transition-all duration-300 font-medium"
               >
                 Contact Us
               </button>

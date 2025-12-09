@@ -10,17 +10,17 @@ const FAQItem = ({ question, answer, isOpen, onClick }) => {
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      className="border-b border-[#456146]/10 last:border-b-0"
+      className="border-b border-homebear-green-brand/10 last:border-b-0"
     >
       <button
         onClick={onClick}
-        className="w-full py-6 flex items-start justify-between gap-4 text-left hover:text-[#456146] transition-colors group"
+        className="w-full py-6 flex items-start justify-between gap-4 text-left hover:text-homebear-green-brand transition-colors group"
       >
-        <span className="font-semibold text-[#2a3a2b] group-hover:text-[#456146] transition-colors flex-1">
+        <span className="font-semibold text-homebear-dark group-hover:text-homebear-green-brand transition-colors flex-1">
           {question}
         </span>
         <ChevronDown
-          className={`flex-shrink-0 text-[#456146] transition-transform duration-300 ${
+          className={`flex-shrink-0 text-homebear-green-brand transition-transform duration-300 ${
             isOpen ? 'rotate-180' : ''
           }`}
           size={20}
@@ -35,7 +35,7 @@ const FAQItem = ({ question, answer, isOpen, onClick }) => {
         transition={{ duration: 0.3 }}
         className="overflow-hidden"
       >
-        <p className="pb-6 text-[#5a5a5a] leading-relaxed whitespace-pre-line">
+        <p className="pb-6 text-homebear-gray leading-relaxed whitespace-pre-line">
           {answer}
         </p>
       </motion.div>
@@ -67,7 +67,7 @@ const FAQ = () => {
 
       <div className="pt-20 min-h-screen bg-white">
         {/* Hero Section */}
-        <div className="bg-gradient-to-b from-[#f8f6f3] to-white py-16 md:py-24">
+        <div className="bg-gradient-to-b from-homebear-beige to-white py-16 md:py-24">
           <div className="container mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -75,10 +75,10 @@ const FAQ = () => {
               transition={{ duration: 0.6 }}
               className="text-center max-w-3xl mx-auto"
             >
-              <h1 className="text-4xl md:text-6xl font-bold text-[#2a3a2b] mb-6">
-                Frequently Asked <span className="text-[#456146]">Questions</span>
+              <h1 className="text-4xl md:text-6xl font-bold text-homebear-dark mb-6">
+                Frequently Asked <span className="text-homebear-green-brand">Questions</span>
               </h1>
-              <p className="text-xl text-[#5a5a5a] leading-relaxed">
+              <p className="text-xl text-homebear-gray leading-relaxed">
                 Everything you need to know about homebear smart home automation. Can't find your answer? Feel free to contact us.
               </p>
             </motion.div>
@@ -96,10 +96,10 @@ const FAQ = () => {
               transition={{ delay: categoryIndex * 0.1 }}
               className="mb-12 last:mb-0"
             >
-              <h2 className="text-2xl md:text-3xl font-bold text-[#2a3a2b] mb-6">
+              <h2 className="text-2xl md:text-3xl font-bold text-homebear-dark mb-6">
                 {category.category}
               </h2>
-              <div className="bg-white rounded-2xl shadow-lg border border-[#456146]/10 overflow-hidden">
+              <div className="bg-white rounded-2xl shadow-lg border border-homebear-green-brand/10 overflow-hidden">
                 <div className="p-4 md:p-6">
                   {category.questions.map((item, questionIndex) => (
                     <FAQItem
@@ -117,7 +117,7 @@ const FAQ = () => {
         </div>
 
         {/* CTA Section */}
-        <div className="bg-gradient-to-br from-[#456146] to-[#567557] py-16 md:py-20">
+        <div className="bg-gradient-to-br from-homebear-green-brand to-homebear-green-light py-16 md:py-20">
           <div className="container mx-auto px-4 text-center">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -135,7 +135,7 @@ const FAQ = () => {
                 onClick={() => {
                   window.location.href = '/#contact';
                 }}
-                className="inline-flex items-center gap-2 px-8 py-4 bg-white text-[#456146] rounded-full hover:bg-white/90 transition-all duration-300 transform hover:scale-105 font-bold text-lg shadow-xl"
+                className="inline-flex items-center gap-2 px-8 py-4 bg-white text-homebear-green-brand rounded-full hover:bg-white/90 transition-all duration-300 transform hover:scale-105 font-bold text-lg shadow-xl"
               >
                 Contact Us
               </button>
