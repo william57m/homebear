@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Shield, Smartphone, Zap, CheckCircle2 } from 'lucide-react';
+import { Shield, Smartphone, Zap } from 'lucide-react';
 import heroImage from '@/images/hero.png';
 import CatcherButton from '@/components/ui/catcher-button';
 
@@ -56,7 +56,7 @@ const Hero = () => {
             transition={{ delay: 0.5, duration: 0.6 }}
             className="text-xl md:text-2xl text-white/90 mb-12 leading-relaxed max-w-3xl mx-auto"
           >
-            Homebear combines the bear's natural efficiency with instinctive, fully local automation. Secure, private smart home solutions designed specifically for Vancouver living.
+            Homebear combines the bear's natural efficiency with instinctive, fully local automation. Secure, private smart home solutions designed for Vancouver living.
           </motion.p>
 
           {/* Feature Badges Grid */}

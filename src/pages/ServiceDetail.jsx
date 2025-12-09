@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { ArrowLeft, CheckCircle2, ArrowRight } from 'lucide-react';
+import { ArrowLeft, CheckCircle2 } from 'lucide-react';
 import { servicesData } from '@/data/servicesData';
 import { Helmet } from 'react-helmet';
 import PrimaryButton from '@/components/ui/primary-button';
@@ -121,7 +121,7 @@ const ServiceDetail = () => {
                   to="/#contact"
                 >
                   <PrimaryButton fullWidth bold padding="large">
-                    Get a Quote <ArrowRight className="ml-2 w-5 h-5" />
+                    Get a Quote
                   </PrimaryButton>
                 </Link>
               </div>

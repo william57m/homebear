@@ -34,7 +34,6 @@ const Difference = () => {
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-2">
             The <span className="text-homebear-green-pale">homebear</span> difference
           </h2>
-          <div className="w-16 h-1 bg-homebear-green-pale"></div>
         </motion.div>
 
         <div className="grid md:grid-cols-3 gap-8">

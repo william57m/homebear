@@ -135,7 +135,6 @@ const Contact = () => {
                 </div>
 
                 <PrimaryButton fullWidth type="submit">
-                  <Send size={20} />
                   Send Message
                 </PrimaryButton>
               </form>
@@ -188,34 +187,28 @@ const Contact = () => {
               </div>
             </div>
 
-            <div className="bg-gradient-to-br from-homebear-green-brand to-homebear-green-light rounded-2xl p-8 text-white shadow-xl flex-1">
+            <div className="bg-homebear-dark rounded-2xl p-8 text-white shadow-xl flex-1">
               <h3 className="text-2xl font-bold mb-4">Why choose homebear?</h3>
               <ul className="space-y-4">
                 <li className="flex items-center gap-3">
-                  <div className="w-10 h-10 bg-white/20 rounded-xl flex items-center justify-center flex-shrink-0">
-                    <Shield size={20} />
-                  </div>
+                  <Shield size={28} className="text-homebear-green-pale" />
                   <div className="flex-1">
                     <div className="font-semibold">100% Local, 100% Private</div>
-                    <div className="text-sm text-white/90">Everything runs locally—no cloud, no data leaving your home.</div>
+                    <div className="text-sm text-gray-400">Everything runs locally—no cloud, no data leaving your home.</div>
                   </div>
                 </li>
                 <li className="flex items-center gap-3">
-                  <div className="w-10 h-10 bg-white/20 rounded-xl flex items-center justify-center flex-shrink-0">
-                    <Smartphone size={20} />
-                  </div>
+                  <Smartphone size={28} className="text-homebear-green-pale"/>
                   <div className="flex-1">
                     <div className="font-semibold">One Platform, Not a Pile of Apps</div>
-                    <div className="text-sm text-white/90">All your devices unified in a single, seamless interface.</div>
+                    <div className="text-sm text-gray-400">All your devices unified in a single, seamless interface.</div>
                   </div>
                 </li>
                 <li className="flex items-center gap-3">
-                  <div className="w-10 h-10 bg-white/20 rounded-xl flex items-center justify-center flex-shrink-0">
-                    <Cpu size={20} />
-                  </div>
+                  <Cpu size={28} className="text-homebear-green-pale"/>
                   <div className="flex-1">
                     <div className="font-semibold">Built on Long-Lasting Technologies</div>
-                    <div className="text-sm text-white/90">Future-proof standards like Zigbee, Thread, Z-Wave, and Wi-Fi.</div>
+                    <div className="text-sm text-gray-400">Future-proof standards like Zigbee, Thread, Z-Wave, and Wi-Fi.</div>
                   </div>
                 </li>
               </ul>

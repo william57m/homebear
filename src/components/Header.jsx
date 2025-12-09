@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import logo from '@/images/logo.png';
 import PrimaryButton from '@/components/ui/primary-button';
 
@@ -10,6 +10,7 @@ const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
+  const isTransparent = location.pathname === '/' && !isScrolled;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -21,30 +22,12 @@ const Header = () => {
 
   const handleNavigation = (sectionId) => {
     setIsMobileMenuOpen(false);
-    
-    if (location.pathname === '/') {
-      // If we are already on home, just scroll
-      const element = document.getElementById(sectionId);
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
-      }
-    } else {
-      // If we are on a detail page, navigate to home with hash
-      // The Home component needs to handle the scrolling upon mount/update
-      navigate(`/#${sectionId}`);
-    }
+    navigate(`/#${sectionId}`);
   };
 
   const handleLogoClick = () => {
-    if (location.pathname === '/') {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    } else {
-      navigate('/');
-    }
+    navigate('/');
   };
-
-  // Determine if we should use transparent header (only on home page when not scrolled)
-  const isTransparent = location.pathname === '/' && !isScrolled;
 
   return (
     <motion.header
@@ -86,20 +69,20 @@ const Header = () => {
               Home
             </button>
             <button
-              onClick={() => handleNavigation('services')}
-              className={`transition-colors font-medium ${
-                !isTransparent ? 'text-homebear-dark hover:text-homebear-green-brand' : 'text-white hover:text-homebear-beige'
-              }`}
-            >
-              Services
-            </button>
-            <button
               onClick={() => handleNavigation('smart-scenarios')}
               className={`transition-colors font-medium ${
                 !isTransparent ? 'text-homebear-dark hover:text-homebear-green-brand' : 'text-white hover:text-homebear-beige'
               }`}
             >
               Scenarios
+            </button>
+            <button
+              onClick={() => handleNavigation('services')}
+              className={`transition-colors font-medium ${
+                !isTransparent ? 'text-homebear-dark hover:text-homebear-green-brand' : 'text-white hover:text-homebear-beige'
+              }`}
+            >
+              Services
             </button>
             <PrimaryButton onClick={() => handleNavigation('contact')}>
               Contact Us
@@ -132,16 +115,16 @@ const Header = () => {
                 Home
               </button>
               <button
-                onClick={() => handleNavigation('services')}
-                className="text-homebear-dark hover:text-homebear-green-brand transition-colors font-medium text-left"
-              >
-                Services
-              </button>
-              <button
                 onClick={() => handleNavigation('smart-scenarios')}
                 className="text-homebear-dark hover:text-homebear-green-brand transition-colors font-medium text-left"
               >
                 Smart Scenarios
+              </button>
+              <button
+                onClick={() => handleNavigation('services')}
+                className="text-homebear-dark hover:text-homebear-green-brand transition-colors font-medium text-left"
+              >
+                Services
               </button>
               <PrimaryButton onClick={() => handleNavigation('contact')}>
                 Contact Us
