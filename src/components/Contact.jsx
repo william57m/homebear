@@ -136,7 +136,7 @@ const Contact = () => {
 
                 <Button
                   type="submit"
-                  className="w-full bg-homebear-green-brand hover:bg-homebear-green-light text-white py-6 rounded-full font-semibold flex items-center justify-center gap-2 transition-all duration-300 transform hover:scale-105"
+                  className="w-full bg-homebear-green-brand hover:bg-homebear-green-light text-white py-6 rounded-full font-medium flex items-center justify-center gap-2 transition-all duration-300 transform hover:scale-105"
                 >
                   <Send size={20} />
                   Send Message

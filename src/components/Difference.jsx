@@ -25,10 +25,10 @@ const Difference = () => {
     <section id="difference" className="py-20 bg-homebear-dark">
       <div className="container mx-auto px-4 max-w-6xl">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.6 }}
           className="mb-12"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-2">
@@ -44,10 +44,10 @@ const Difference = () => {
             return (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: index * 0.1, duration: 0.5 }}
+                transition={{ delay: index * 0.1, duration: 0.6 }}
                 className="group relative"
               >
                 {/* Vertical accent line */}

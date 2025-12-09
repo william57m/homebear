@@ -32,9 +32,9 @@ const Hero = () => {
       {/* Centered Content */}
       <div className="container mx-auto px-4 sm:px-6 md:px-8 relative z-10 text-center">
         <motion.div
-          initial={{ opacity: 0, y: 40 }}
+          initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.6 }}
           className="max-w-4xl mx-auto"
         >
 
@@ -42,7 +42,7 @@ const Hero = () => {
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3, duration: 0.8 }}
+            transition={{ delay: 0.3, duration: 0.6 }}
             className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight mt-8 md:mt-0"
           >
             Instinctive Home Automation
@@ -52,7 +52,7 @@ const Hero = () => {
           <motion.p
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.5, duration: 0.8 }}
+            transition={{ delay: 0.5, duration: 0.6 }}
             className="text-xl md:text-2xl text-white/90 mb-12 leading-relaxed max-w-3xl mx-auto"
           >
             Homebear combines the bear's natural efficiency with instinctive, fully local automation. Secure, private smart home solutions designed specifically for Vancouver living.
@@ -62,7 +62,7 @@ const Hero = () => {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.7, duration: 0.8 }}
+            transition={{ delay: 0.7, duration: 0.6 }}
             className="grid grid-cols-3 gap-4 sm:gap-8 mb-12 max-w-2xl mx-auto"
           >
             {features.map((feature, index) => {
@@ -84,7 +84,7 @@ const Hero = () => {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.9, duration: 0.8 }}
+            transition={{ delay: 0.9, duration: 0.6 }}
           >
             <button
               onClick={scrollToContact}

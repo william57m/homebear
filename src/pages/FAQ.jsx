@@ -7,7 +7,7 @@ import { faqs } from '@/data/faqData';
 const FAQItem = ({ question, answer, isOpen, onClick }) => {
   return (
     <motion.div
-      initial={{ opacity: 0, y: 20 }}
+      initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       className="border-b border-homebear-green-brand/10 last:border-b-0"
