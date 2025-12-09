@@ -43,7 +43,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3, duration: 0.8 }}
-            className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight"
+            className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight mt-8 md:mt-0"
           >
             Instinctive Home Automation
           </motion.h1>
@@ -63,7 +63,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.7, duration: 0.8 }}
-            className="grid grid-cols-1 sm:grid-cols-3 gap-8 mb-12 max-w-2xl mx-auto"
+            className="grid grid-cols-3 gap-4 sm:gap-8 mb-12 max-w-2xl mx-auto"
           >
             {features.map((feature, index) => {
               const Icon = feature.icon;
@@ -73,8 +73,8 @@ const Hero = () => {
                   whileHover={{ scale: 1.1, y: -5 }}
                   className="text-center"
                 >
-                  <Icon className="w-12 h-12 text-white mx-auto mb-4" strokeWidth={1.5} />
-                  <h3 className="font-bold text-white text-sm">{feature.title}</h3>
+                  <Icon className="w-10 h-10 sm:w-12 sm:h-12 text-white mx-auto mb-3 sm:mb-4" strokeWidth={1.5} />
+                  <h3 className="font-bold text-white text-xs sm:text-sm">{feature.title}</h3>
                 </motion.div>
               );
             })}
