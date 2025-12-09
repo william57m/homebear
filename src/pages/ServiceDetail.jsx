@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { ArrowLeft, CheckCircle2, ArrowRight } from 'lucide-react';
 import { servicesData } from '@/data/servicesData';
 import { Helmet } from 'react-helmet';
+import PrimaryButton from '@/components/ui/primary-button';
 
 const ServiceDetail = () => {
   const { slug } = useParams();
@@ -118,9 +119,10 @@ const ServiceDetail = () => {
                 </p>
                 <Link 
                   to="/#contact"
-                  className="inline-flex items-center justify-center w-full bg-homebear-green-brand text-white px-8 py-3 rounded-full hover:bg-homebear-green-light transition-all font-bold shadow-lg hover:shadow-xl hover:-translate-y-1"
                 >
-                  Get a Quote <ArrowRight className="ml-2 w-5 h-5" />
+                  <PrimaryButton fullWidth bold padding="large">
+                    Get a Quote <ArrowRight className="ml-2 w-5 h-5" />
+                  </PrimaryButton>
                 </Link>
               </div>
             </div>

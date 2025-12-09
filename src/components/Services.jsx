@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import ServiceCard from '@/components/ServiceCard';
 import { servicesData } from '@/data/servicesData';
+import PrimaryButton from '@/components/ui/primary-button';
 
 const Services = () => {
   return (
@@ -57,14 +58,14 @@ const Services = () => {
                 <p className="text-homebear-gray leading-relaxed mb-4">
                   In addition to our popular services, our expertise spans a multitude of smart home solutions. Whether you need to manage safety (<span className="font-semibold text-homebear-green-brand">water leak detection and automatic shut-off</span>), optimize convenience (<span className="font-semibold text-homebear-green-brand">robot vacuum scheduling, garage door control, mailbox notifications, etc.</span>), or enhance your environment (<span className="font-semibold text-homebear-green-brand">air quality and humidity monitoring</span>), the possibilities are unlimited. We work with any device and can integrate every automation imaginable into your personalized system.
                 </p>
-                <button
+                <PrimaryButton
+                  variant="secondary"
                   onClick={() => {
                     const element = document.getElementById('contact');
                     if (element) {
                       element.scrollIntoView({ behavior: 'smooth' });
                     }
                   }}
-                  className="inline-flex items-center gap-2 px-6 py-3 border-2 border-homebear-green-brand text-homebear-green-brand bg-white/50 backdrop-blur-sm rounded-full hover:bg-homebear-green-brand hover:text-white transition-all duration-300 transform hover:scale-105 font-semibold"
                 >
                   <svg className="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
@@ -72,7 +73,7 @@ const Services = () => {
                   <span>
                     Schedule a consultation to discuss your needs
                   </span>
-                </button>
+                </PrimaryButton>
               </div>
             </div>
           </div>

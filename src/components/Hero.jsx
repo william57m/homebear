@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Shield, Smartphone, Zap, CheckCircle2 } from 'lucide-react';
 import heroImage from '@/images/hero.png';
+import CatcherButton from '@/components/ui/catcher-button';
 
 const Hero = () => {
   const scrollToContact = () => {
@@ -86,12 +87,9 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.9, duration: 0.6 }}
           >
-            <button
-              onClick={scrollToContact}
-              className="bg-white text-homebear-green-brand px-12 py-5 rounded-full hover:bg-homebear-beige transition-all duration-300 transform hover:scale-105 font-bold shadow-2xl inline-flex items-center gap-2"
-            >
+            <CatcherButton onClick={scrollToContact}>
               Get your free consultation
-            </button>
+            </CatcherButton>
             
             {/* Secondary Link */}
             <div className="mt-6">

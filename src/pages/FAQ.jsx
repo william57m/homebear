@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { ChevronDown } from 'lucide-react';
 import { Helmet } from 'react-helmet';
 import { faqs } from '@/data/faqData';
+import CatcherButton from '@/components/ui/catcher-button';
 
 const FAQItem = ({ question, answer, isOpen, onClick }) => {
   return (
@@ -131,14 +132,13 @@ const FAQ = () => {
               <p className="text-xl text-white/90 mb-8">
                 We're here to help! Get in touch with our team for personalized answers and a free consultation.
               </p>
-              <button
+              <CatcherButton
                 onClick={() => {
                   window.location.href = '/#contact';
                 }}
-                className="inline-flex items-center gap-2 px-8 py-4 bg-white text-homebear-green-brand rounded-full hover:bg-white/90 transition-all duration-300 transform hover:scale-105 font-bold text-lg shadow-xl"
               >
                 Contact Us
-              </button>
+              </CatcherButton>
             </motion.div>
           </div>
         </div>

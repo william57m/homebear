@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Mail, Phone, MapPin, Send, Shield, Smartphone, Cpu, HelpCircle, ArrowRight } from 'lucide-react';
 import { useToast } from '@/components/ui/use-toast';
-import { Button } from '@/components/ui/button';
+import PrimaryButton from '@/components/ui/primary-button';
 import { contactInfo } from '@/data/contactData';
 
 const Contact = () => {
@@ -134,13 +134,10 @@ const Contact = () => {
                   />
                 </div>
 
-                <Button
-                  type="submit"
-                  className="w-full bg-homebear-green-brand hover:bg-homebear-green-light text-white py-6 rounded-full font-medium flex items-center justify-center gap-2 transition-all duration-300 transform hover:scale-105"
-                >
+                <PrimaryButton fullWidth type="submit">
                   <Send size={20} />
                   Send Message
-                </Button>
+                </PrimaryButton>
               </form>
             </div>
           </motion.div>
@@ -231,7 +228,7 @@ const Contact = () => {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.3 }}
+          transition={{ duration: 0.6, delay: 0.1 }}
           className="mt-16"
         >
           <div className="bg-gradient-to-br from-homebear-beige to-white rounded-2xl p-8 md:p-12 shadow-xl border border-homebear-green-brand/10 text-center group hover:shadow-2xl transition-all duration-300">
@@ -247,10 +244,11 @@ const Contact = () => {
               </p>
               <Link
                 to="/faq"
-                className="inline-flex items-center gap-2 px-8 py-4 bg-homebear-green-brand text-white rounded-full hover:bg-homebear-green-light transition-all duration-300 transform hover:scale-105 font-semibold shadow-lg"
               >
-                Visit our FAQ page
-                <ArrowRight size={20} />
+                <PrimaryButton bold padding="large">
+                  Visit our FAQ page
+                  <ArrowRight size={20} />
+                </PrimaryButton>
               </Link>
             </div>
           </div>

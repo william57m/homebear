@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import logo from '@/images/logo.png';
+import PrimaryButton from '@/components/ui/primary-button';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -100,12 +101,9 @@ const Header = () => {
             >
               Scenarios
             </button>
-            <button
-              onClick={() => handleNavigation('contact')}
-              className="bg-homebear-green-brand text-white px-6 py-2 rounded-full hover:bg-homebear-green-light transition-all duration-300 transform hover:scale-105 font-medium"
-            >
+            <PrimaryButton onClick={() => handleNavigation('contact')}>
               Contact Us
-            </button>
+            </PrimaryButton>
           </div>
 
           {/* Mobile Menu Button */}
@@ -145,12 +143,9 @@ const Header = () => {
               >
                 Smart Scenarios
               </button>
-              <button
-                onClick={() => handleNavigation('contact')}
-                className="bg-homebear-green-brand text-white px-6 py-2 rounded-full hover:bg-homebear-green-light transition-all duration-300 font-medium"
-              >
+              <PrimaryButton onClick={() => handleNavigation('contact')}>
                 Contact Us
-              </button>
+              </PrimaryButton>
             </div>
           </motion.div>
         )}
