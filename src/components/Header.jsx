@@ -22,11 +22,28 @@ const Header = () => {
 
   const handleNavigation = (sectionId) => {
     setIsMobileMenuOpen(false);
-    navigate(`/#${sectionId}`);
+    
+    if (location.pathname === '/') {
+      // If we are already on home, just scroll
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+        navigate(`/#${sectionId}`);
+      }
+    } else {
+      // If we are on a detail page, navigate to home with hash
+      // The Home component needs to handle the scrolling upon mount/update
+      navigate(`/#${sectionId}`);
+    }
   };
 
   const handleLogoClick = () => {
-    navigate('/');
+    if (location.pathname === '/') {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      navigate('/');
+    } else {
+      navigate('/');
+    }
   };
 
   return (
