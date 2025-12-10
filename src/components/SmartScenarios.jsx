@@ -74,13 +74,13 @@ const SmartScenarios = () => {
               exit={{ opacity: 0, x: -100 }}
               transition={{ duration: 0.6 }}
             >
-              <div className="grid md:grid-cols-2 gap-0">
+              <div className="grid md:grid-cols-2 gap-0 min-h-[800px] md:min-h-[600px]">
                 {/* Image Section */}
                 <motion.div 
                   initial={{ opacity: 0, scale: 1.1 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ delay: 0.2, duration: 0.6 }}
-                  className="relative h-64 md:h-full min-h-[500px] overflow-hidden"
+                  className="relative h-80 md:h-auto overflow-hidden"
                 >
                   <img 
                     src={currentScenario.image} 
