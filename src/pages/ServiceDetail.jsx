@@ -25,7 +25,7 @@ const ServiceDetail = () => {
   return (
     <>
       <Helmet>
-        <title>{service.title} | homebear Services</title>
+        <title>{service.title} | homebear</title>
         <meta name="description" content={service.shortDescription} />
       </Helmet>
       
