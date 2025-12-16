@@ -31,14 +31,12 @@ const FAQItem = ({ question, answer, isOpen, onClick }) => {
         initial={false}
         animate={{
           height: isOpen ? 'auto' : 0,
-          opacity: isOpen ? 1 : 0
+          opacity: isOpen ? 1 : 0,
         }}
         transition={{ duration: 0.3 }}
         className="overflow-hidden"
       >
-        <p className="pb-6 text-homebear-gray leading-relaxed whitespace-pre-line">
-          {answer}
-        </p>
+        <p className="pb-6 text-homebear-gray leading-relaxed whitespace-pre-line">{answer}</p>
       </motion.div>
     </motion.div>
   );
@@ -55,7 +53,7 @@ const FAQ = () => {
     const key = `${categoryIndex}-${questionIndex}`;
     setOpenItems(prev => ({
       ...prev,
-      [key]: !prev[key]
+      [key]: !prev[key],
     }));
   };
 
@@ -63,7 +61,10 @@ const FAQ = () => {
     <>
       <Helmet>
         <title>FAQ - Frequently Asked Questions | homebear</title>
-        <meta name="description" content="Find answers to common questions about homebear's smart home automation services, pricing, installation, privacy, and more." />
+        <meta
+          name="description"
+          content="Find answers to common questions about homebear's smart home automation services, pricing, installation, privacy, and more."
+        />
       </Helmet>
 
       <div className="pt-20 min-h-screen bg-white">
@@ -80,7 +81,8 @@ const FAQ = () => {
                 Frequently Asked <span className="text-homebear-green-brand">Questions</span>
               </h1>
               <p className="text-xl text-homebear-gray leading-relaxed">
-                Everything you need to know about homebear smart home automation. Can't find your answer? Feel free to contact us.
+                Everything you need to know about homebear smart home automation. Can't find your
+                answer? Feel free to contact us.
               </p>
             </motion.div>
           </div>
@@ -130,7 +132,8 @@ const FAQ = () => {
                 Still have questions?
               </h2>
               <p className="text-xl text-white/90 mb-8">
-                We're here to help! Get in touch with our team for personalized answers and a free consultation.
+                We're here to help! Get in touch with our team for personalized answers and a free
+                consultation.
               </p>
               <CatcherButton
                 onClick={() => {

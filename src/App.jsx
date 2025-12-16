@@ -6,6 +6,7 @@ import { Toaster } from '@/components/ui/toaster';
 import Home from '@/pages/Home';
 import ServiceDetail from '@/pages/ServiceDetail';
 import FAQ from '@/pages/FAQ';
+import About from '@/pages/About';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/services/:slug" element={<ServiceDetail />} />
           <Route path="/faq" element={<FAQ />} />
+          <Route path="/about" element={<About />} />
         </Routes>
       </main>
       <Footer />

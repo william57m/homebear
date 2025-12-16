@@ -71,16 +71,16 @@ export const faqs = [
     category: "Technical Details",
     questions: [
       {
-        question: "[TO UPDATE] What technologies and protocols do you use?",
-        answer: "We build on Home Assistant, the world's leading open-source home automation platform. We support Zigbee, Thread, Z-Wave, Wi-Fi, Bluetooth, and many proprietary protocols. This ensures compatibility with thousands of devices and future-proofs your investment."
+        question: "What technologies and protocols do you use?",
+        answer: "We primarily rely on Zigbee, Thread, and Z-Wave devices, which are energy-efficient and emit only minimal signals. For other devices, we seamlessly integrate Wi-Fi and Bluetooth, giving you compatibility with thousands of products today—and ensuring your smart home is ready for the future."
       },
       {
         question: "Can I control my smart home when I'm away?",
         answer: "Yes! We can set up secure remote access so you can control and monitor your home from anywhere. This is optional and fully under your control - the system works perfectly well as a local-only setup if you prefer."
       },
       {
-        question: "[TO UPDATE] What if I want to add more devices later?",
-        answer: "Your homebear system is designed to grow with your needs. You can easily add new devices at any time. We're available to help with expansion, or if you're tech-savvy, you can add compatible devices yourself."
+        question: "What if I want to add more devices later?",
+        answer: "Your Homebear system is built to grow with you. Whenever you’re ready to add new devices, our team takes care of the installation and setup. We’re always here to help you expand."
       },
       {
         question: "Do you provide training on how to use the system?",

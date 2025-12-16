@@ -9,9 +9,21 @@ import scenarioWelcome from '@/images/scenario-welcome.png';
 
 export const scenarios = [
   {
+    icon: Sun,
+    title: "Good Morning",
+    description: "Your day begins effortlessly. As morning arrives, lights gently wake you with a sunrise simulation, while your dashboard displays personalized information like weather, traffic, and your calendar for the day ahead.",
+    details: [
+      "Gradual sunrise simulation with smart lights",
+      "Displays real-time traffic on dashboard",
+      "Reads calendar and weather updates",
+      "Adjusts routine based on schedule"
+    ],
+    image: scenarioMorningRoutine
+  },
+  {
     icon: Leaf,
-    title: "Smart Climate Control",
-    description: "Keep your home comfortable while reducing unnecessary energy use. With intelligent window, door, and presence detection, your climate system adapts automatically to what's happening in your home.",
+    title: "All-Day Climate Control",
+    description: "Throughout the day, your home maintains perfect comfort while minimizing energy waste. Intelligent window, door, and presence detection ensures your climate system adapts automatically to what's happening in every room.",
     details: [
       "Monitors open and closed windows and doors",
       "Detects presence to adjust heating and cooling only when needed",
@@ -22,8 +34,8 @@ export const scenarios = [
   },
   {
     icon: ShieldCheck,
-    title: "Away mode",
-    description: "Heading out for a weekend or an extended trip? Your home simulates your presence and notifies you of anything abnormal.",
+    title: "Away from Home",
+    description: "When you leave for work or a trip, your home seamlessly transitions to away mode. It simulates your presence with intelligent lighting patterns and keeps you informed of anything unusual while you're gone.",
     details: [
       "Random lighting patterns simulate presence",
       "Automated blinds that open and close naturally throughout the day",
@@ -33,21 +45,21 @@ export const scenarios = [
     image: scenarioAwayMode
   },
   {
-    icon: Moon,
-    title: "Bedtime",
-    description: "Place your phone on a specific spot like your night table and your home knows you're going to sleep.",
+    icon: Home,
+    title: "Welcome Home",
+    description: "As you return home in the evening, your house greets you warmly. Geofencing detects your arrival, lighting up the pathway and entryway while adjusting the temperature to your preferred comfort level.",
     details: [
-      "Dims lights progressively over 5 minutes",
-      "Sets thermostat to sleeping temperature",
-      "Automatically locks all doors",
-      "Arms security system in night mode",
+      "Turns on pathway and entry lights",
+      "Adjusts thermostat to comfort settings",
+      "Unlocks door when you arrive",
+      "Disarms security system automatically"
     ],
-    image: scenarioBedtime
+    image: scenarioWelcome
   },
   {
     icon: Film,
-    title: "Movie mode",
-    description: "Start a movie on your TV, and your home sets the mood instantly",
+    title: "Movie Night",
+    description: "It's time to unwind. Start a movie on your TV, and your home instantly creates the perfect cinema atmosphere—dimming lights, lowering shades, and minimizing distractions.",
     details: [
       "Dims lights or turns off completely",
       "Lowers blackout shades automatically",
@@ -57,28 +69,16 @@ export const scenarios = [
     image: scenarioMovie
   },
   {
-    icon: Sun,
-    title: "Morning routine",
-    description: "Start your day right. Let your lights gently wake you while your dashboard immediately delivers personalized, useful information like weather, traffic, and more.",
+    icon: Moon,
+    title: "Good Night",
+    description: "As your day winds down, simply place your phone on your nightstand. Your home recognizes it's time for bed and prepares everything for a peaceful night's rest.",
     details: [
-      "Gradual sunrise simulation with smart lights",
-      "Displays real-time traffic on dashboard",
-      "Reads calendar and weather updates",
-      "Adjusts routine based on schedule"
+      "Dims lights progressively over 5 minutes",
+      "Sets thermostat to sleeping temperature",
+      "Automatically locks all doors",
+      "Arms security system in night mode",
     ],
-    image: scenarioMorningRoutine
-  },
-  {
-    icon: Home,
-    title: "Welcome home scenes",
-    description: "Never walk into a dark house. Geofencing detects your arrival, turning on entryway lights and adjusting the temperature to your preference.",
-    details: [
-      "Turns on pathway and entry lights",
-      "Adjusts thermostat to comfort settings",
-      "Unlocks door when you arrive",
-      "Disarms security system automatically"
-    ],
-    image: scenarioWelcome
+    image: scenarioBedtime
   },
   {
     icon: Sparkles,

@@ -12,21 +12,25 @@ const Footer = () => {
         <div className="grid md:grid-cols-4 gap-8 mb-8">
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <img 
+              <img
                 src={logo}
                 alt={`${companyInfo.name} logo`}
                 className="w-10 h-10 object-contain brightness-0 invert"
               />
               <span className="text-2xl font-bold font-sofia-pro pt-4">{companyInfo.name}</span>
             </div>
-            <p className="text-gray-400 mb-4">
-              {companyInfo.tagline}
-            </p>
+            <p className="text-gray-400 mb-4">{companyInfo.tagline}</p>
             <div className="flex gap-3">
-              <a href="#" className="w-10 h-10 bg-homebear-green-brand/20 hover:bg-homebear-green-brand rounded-full flex items-center justify-center transition-colors">
+              <a
+                href="#"
+                className="w-10 h-10 bg-homebear-green-brand/20 hover:bg-homebear-green-brand rounded-full flex items-center justify-center transition-colors"
+              >
                 <Facebook size={18} />
               </a>
-              <a href="#" className="w-10 h-10 bg-homebear-green-brand/20 hover:bg-homebear-green-brand rounded-full flex items-center justify-center transition-colors">
+              <a
+                href="#"
+                className="w-10 h-10 bg-homebear-green-brand/20 hover:bg-homebear-green-brand rounded-full flex items-center justify-center transition-colors"
+              >
                 <Instagram size={18} />
               </a>
             </div>
@@ -35,9 +39,12 @@ const Footer = () => {
           <div>
             <span className="text-lg font-semibold mb-4 block text-homebear-beige">Services</span>
             <ul className="space-y-2 text-gray-400">
-              {servicesData.map((service) => (
+              {servicesData.map(service => (
                 <li key={service.id}>
-                  <Link to={`/services/${service.id}`} className="hover:text-white transition-colors">
+                  <Link
+                    to={`/services/${service.id}`}
+                    className="hover:text-white transition-colors"
+                  >
                     {service.title}
                   </Link>
                 </li>
@@ -48,10 +55,26 @@ const Footer = () => {
           <div>
             <span className="text-lg font-semibold mb-4 block text-homebear-beige">Company</span>
             <ul className="space-y-2 text-gray-400">
-              <li><a href="#" className="hover:text-white transition-colors">About Us [TO CREATE]</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Blog [TO CREATE]</a></li>
-              <li><a href="#contact" className="hover:text-white transition-colors">Contact</a></li>
-              <li><Link to="/faq" className="hover:text-white transition-colors">FAQ</Link></li>
+              <li>
+                <Link to="/about" className="hover:text-white transition-colors">
+                  About Us
+                </Link>
+              </li>
+              <li>
+                <a href="#" className="hover:text-white transition-colors">
+                  Blog [TO CREATE]
+                </a>
+              </li>
+              <li>
+                <a href="#contact" className="hover:text-white transition-colors">
+                  Contact
+                </a>
+              </li>
+              <li>
+                <Link to="/faq" className="hover:text-white transition-colors">
+                  FAQ
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -59,14 +82,19 @@ const Footer = () => {
             <span className="text-lg font-semibold mb-4 block text-homebear-beige">Contact</span>
             <ul className="space-y-2 text-gray-400">
               <li>{contactInfo.address.street}</li>
-              <li>{contactInfo.address.city}, {contactInfo.address.state} {contactInfo.address.zip}</li>
+              <li>
+                {contactInfo.address.city}, {contactInfo.address.state} {contactInfo.address.zip}
+              </li>
               <li className="pt-2">
                 <a href={`tel:${contactInfo.phone}`} className="hover:text-white transition-colors">
                   {contactInfo.phone}
                 </a>
               </li>
               <li>
-                <a href={`mailto:${contactInfo.email}`} className="hover:text-white transition-colors">
+                <a
+                  href={`mailto:${contactInfo.email}`}
+                  className="hover:text-white transition-colors"
+                >
                   {contactInfo.email}
                 </a>
               </li>
@@ -75,13 +103,17 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-gray-700 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-gray-400 text-sm">
-            {companyInfo.copyright}
-          </p>
+          <p className="text-gray-400 text-sm">{companyInfo.copyright}</p>
           <div className="flex gap-6 text-sm text-gray-400">
-            <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
-            <a href="#" className="hover:text-white transition-colors">Cookie Policy</a>
+            <a href="#" className="hover:text-white transition-colors">
+              Privacy Policy
+            </a>
+            <a href="#" className="hover:text-white transition-colors">
+              Terms of Service
+            </a>
+            <a href="#" className="hover:text-white transition-colors">
+              Cookie Policy
+            </a>
           </div>
         </div>
       </div>
