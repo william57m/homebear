@@ -205,7 +205,7 @@ const About = () => {
               >
                 <p className="text-white/90 text-lg leading-relaxed">
                   The bear is an iconic symbol of British Columbia and the Pacific Northwest. Here
-                  in Vancouver, bears are part of our natural landscape they represent the
+                  in Vancouver, bears are part of our natural landscape, they represent the
                   intelligence and adaptability of our local wildlife. But there's a deeper reason
                   we chose the bear:{' '}
                   <span className="font-semibold text-homebear-green-pale">
@@ -328,24 +328,24 @@ const About = () => {
         </section>
 
         {/* Values Section */}
-        <section className="py-20 md:py-28 bg-gradient-to-b from-white via-homebear-beige/30 to-white">
-          <div className="container mx-auto px-4 max-w-6xl">
+        <section className="py-16 md:py-20 bg-gradient-to-b from-white via-homebear-beige/30 to-white">
+          <div className="container mx-auto px-4 max-w-7xl">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="text-center mb-20"
+              className="text-center mb-12"
             >
-              <h2 className="text-4xl md:text-5xl font-bold text-homebear-dark mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold text-homebear-dark mb-3">
                 Our <span className="text-homebear-green-brand">Values</span>
               </h2>
-              <p className="text-lg text-homebear-gray max-w-2xl mx-auto">
+              <p className="text-base text-homebear-gray max-w-2xl mx-auto">
                 The principles that guide everything we do
               </p>
             </motion.div>
 
-            <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {values.map((value, index) => {
                 const Icon = value.icon;
                 return (
@@ -358,13 +358,13 @@ const About = () => {
                     whileHover={{ y: -10 }}
                     className="h-full"
                   >
-                    <div className="group h-full bg-gradient-to-br from-homebear-beige to-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-homebear-green-brand/10 flex flex-col">
-                      <div className="w-16 h-16 bg-homebear-green-brand rounded-2xl flex items-center justify-center mb-6 transform transition-transform duration-300 group-hover:rotate-3 group-hover:scale-110">
-                        <Icon className="text-white" size={32} />
+                    <div className="group h-full bg-gradient-to-br from-homebear-beige to-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 border border-homebear-green-brand/10 flex flex-col">
+                      <div className="w-12 h-12 bg-homebear-green-brand rounded-xl flex items-center justify-center mb-4 transform transition-transform duration-300 group-hover:rotate-3 group-hover:scale-110">
+                        <Icon className="text-white" size={24} />
                       </div>
 
-                      <h3 className="text-2xl font-bold text-homebear-dark mb-3">{value.title}</h3>
-                      <p className="text-homebear-gray mb-6 leading-relaxed flex-grow">
+                      <h3 className="text-lg font-bold text-homebear-dark mb-2">{value.title}</h3>
+                      <p className="text-homebear-gray text-sm leading-relaxed flex-grow">
                         {value.description}
                       </p>
                     </div>
