@@ -1,16 +1,6 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
-import {
-  Shield,
-  Heart,
-  Users,
-  Target,
-  Lightbulb,
-  CheckCircle2,
-  ChevronRight,
-  Zap,
-  Brain,
-} from 'lucide-react';
+import { Shield, Heart, Users, Target, ChevronRight, Zap, Brain } from 'lucide-react';
 import { Helmet } from 'react-helmet';
 import CatcherButton from '@/components/ui/catcher-button';
 import { useNavigate } from 'react-router-dom';
@@ -44,6 +34,10 @@ const About = () => {
         'We use proven standards that will stand the test of time, protecting your investment.',
     },
   ];
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const scrollToContact = () => {
     navigate('/#contact');
@@ -178,20 +172,16 @@ const About = () => {
             <div className="absolute bottom-20 right-20 w-96 h-96 bg-homebear-green-light rounded-full blur-3xl"></div>
           </div>
 
-          <div className="container mx-auto px-4 max-w-6xl relative z-10">
+          <div className="container mx-auto px-4 max-w-6xl relative z-10 pl-6">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="mb-16"
             >
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-2">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-10">
                 Why <span className="text-homebear-green-pale">homebear</span>?
               </h2>
-              <p className="text-xl text-white/80 max-w-2xl">
-                More than just a name, it's our philosophy
-              </p>
             </motion.div>
 
             {/* Intro paragraph with logo */}
@@ -251,15 +241,19 @@ const About = () => {
                 <div className="absolute left-0 top-0 w-0.5 h-0 bg-homebear-green-pale group-hover:h-full transition-all duration-500"></div>
 
                 <div className="pl-6">
-                  {/* Icon */}
-                  <div className="mb-4">
-                    <Zap size={28} strokeWidth={1.5} className="text-homebear-green-pale" />
+                  {/* Icon and Title - horizontal on mobile, vertical on desktop */}
+                  <div className="flex md:block items-center md:items-start gap-3 md:gap-0 mb-3">
+                    <Zap
+                      size={28}
+                      strokeWidth={1.5}
+                      className="text-homebear-green-pale flex-shrink-0 md:mb-4"
+                    />
+                    <h3 className="text-xl font-semibold text-white leading-snug md:mb-3">
+                      Energy Efficiency
+                    </h3>
                   </div>
 
                   {/* Content */}
-                  <h3 className="text-xl font-semibold text-white mb-3 leading-snug">
-                    Energy Efficiency
-                  </h3>
                   <p className="text-gray-400 leading-relaxed">
                     This remarkable ability to optimize energy use mirrors what we do with your
                     home: intelligent automation that reduces waste while maintaining perfect
@@ -279,15 +273,19 @@ const About = () => {
                 <div className="absolute left-0 top-0 w-0.5 h-0 bg-homebear-green-pale group-hover:h-full transition-all duration-500"></div>
 
                 <div className="pl-6">
-                  {/* Icon */}
-                  <div className="mb-4">
-                    <Brain size={28} strokeWidth={1.5} className="text-homebear-green-pale" />
+                  {/* Icon and Title - horizontal on mobile, vertical on desktop */}
+                  <div className="flex md:block items-center md:items-start gap-3 md:gap-0 mb-3">
+                    <Brain
+                      size={28}
+                      strokeWidth={1.5}
+                      className="text-homebear-green-pale flex-shrink-0 md:mb-4"
+                    />
+                    <h3 className="text-xl font-semibold text-white leading-snug md:mb-3">
+                      Intelligence & Instinct
+                    </h3>
                   </div>
 
                   {/* Content */}
-                  <h3 className="text-xl font-semibold text-white mb-3 leading-snug">
-                    Intelligence & Instinct
-                  </h3>
                   <p className="text-gray-400 leading-relaxed">
                     Bears are highly intelligent and instinctive. They learn patterns, adapt to
                     their environment, and make smart decisions just like your{' '}
@@ -307,15 +305,19 @@ const About = () => {
                 <div className="absolute left-0 top-0 w-0.5 h-0 bg-homebear-green-pale group-hover:h-full transition-all duration-500"></div>
 
                 <div className="pl-6">
-                  {/* Icon */}
-                  <div className="mb-4">
-                    <Shield size={28} strokeWidth={1.5} className="text-homebear-green-pale" />
+                  {/* Icon and Title - horizontal on mobile, vertical on desktop */}
+                  <div className="flex md:block items-center md:items-start gap-3 md:gap-0 mb-3">
+                    <Shield
+                      size={28}
+                      strokeWidth={1.5}
+                      className="text-homebear-green-pale flex-shrink-0 md:mb-4"
+                    />
+                    <h3 className="text-xl font-semibold text-white leading-snug md:mb-3">
+                      Strength & Protection
+                    </h3>
                   </div>
 
                   {/* Content */}
-                  <h3 className="text-xl font-semibold text-white mb-3 leading-snug">
-                    Strength & Protection
-                  </h3>
                   <p className="text-gray-400 leading-relaxed">
                     Bears represent strength and protection. Your{' '}
                     <span className="font-semibold text-homebear-green-pale">homebear</span>{' '}
@@ -337,10 +339,10 @@ const About = () => {
               transition={{ duration: 0.6 }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-homebear-dark mb-3">
+              <h2 className="text-4xl md:text-5xl font-bold text-homebear-dark mb-4">
                 Our <span className="text-homebear-green-brand">Values</span>
               </h2>
-              <p className="text-base text-homebear-gray max-w-2xl mx-auto">
+              <p className="text-lg text-homebear-gray max-w-2xl mx-auto">
                 The principles that guide everything we do
               </p>
             </motion.div>
@@ -355,16 +357,22 @@ const About = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6, delay: index * 0.1 }}
-                    whileHover={{ y: -10 }}
-                    className="h-full"
                   >
-                    <div className="group h-full bg-gradient-to-br from-homebear-beige to-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 border border-homebear-green-brand/10 flex flex-col">
-                      <div className="w-12 h-12 bg-homebear-green-brand rounded-xl flex items-center justify-center mb-4 transform transition-transform duration-300 group-hover:rotate-3 group-hover:scale-110">
-                        <Icon className="text-white" size={24} />
+                    <div className="pl-6">
+                      {/* Icon and Title - horizontal on mobile, vertical on desktop */}
+                      <div className="flex md:block items-center md:items-start gap-3 md:gap-0 mb-3">
+                        <Icon
+                          size={28}
+                          strokeWidth={1.5}
+                          className="text-homebear-green-brand flex-shrink-0 md:mb-4"
+                        />
+                        <h3 className="text-lg font-semibold text-homebear-dark leading-snug md:mb-2">
+                          {value.title}
+                        </h3>
                       </div>
 
-                      <h3 className="text-lg font-bold text-homebear-dark mb-2">{value.title}</h3>
-                      <p className="text-homebear-gray text-sm leading-relaxed flex-grow">
+                      {/* Content */}
+                      <p className="text-homebear-gray text-sm leading-relaxed">
                         {value.description}
                       </p>
                     </div>
